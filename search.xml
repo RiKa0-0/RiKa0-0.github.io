@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>算法精要总复习（updating）</title>
+      <link href="/2020/04/06/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/"/>
+      <url>/2020/04/06/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</url>
+      
+        <content type="html"><![CDATA[<h1 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h1><h2 id="算法的复杂性分析"><a href="#算法的复杂性分析" class="headerlink" title="算法的复杂性分析"></a>算法的复杂性分析</h2><h3 id="时间复杂性"><a href="#时间复杂性" class="headerlink" title="时间复杂性"></a>时间复杂性</h3><ul><li>在进行算法分析时，语句总的执行次数T(n)是关于问题规模n的函数，进而分析T(n)随n的变化情况并确定T(n)的数量级。算法的时间复杂度，也就是算法的时间量度，记作：T(n)= O(f(n))。它表示随问题规模n的增大，算法执行时间的增长率和f(n)的增长率相同，称作算法的渐近时间复杂度，简称为时间复杂度。其中f(n)是问题规模n的某个函数。<br>用大写O()来体现算法时间复杂度的记法，我们称之为大O记法。<br>一般情况下，随着输入规模n的增大，T(n)增长最慢的算法为最优算法。</li></ul><ol><li>推导大O阶方法   </li></ol><p>如何分析一个算法的时间复杂度呢？即如何推导大O阶呢？  </p><p>用常数1取代运行时间中的所有加法常数。  </p><p>在修改后的运行次数函数中，只保留最高阶项。 </p><p>如果最高阶项存在且不是1，则去除与这个项相乘的常数。 </p><p>得到的最后结果就是大O阶。</p><h4 id="例题："><a href="#例题：" class="headerlink" title="例题："></a>例题：</h4><ul><li><p>常数阶</p><pre class=" language-c++"><code class="language-c++">int sum = 0, n = 100;printf(“I love you.com\n”);printf(“I love you.com\n”);printf(“I love you.com\n”);printf(“I love you.com\n”);printf(“I love you.com\n”);printf(“I love you.com\n”);sum = (1+n)*n/2;</code></pre><p>第一条就说明了所有加法常数给他个O(1)即可</p></li><li></li></ul><h3 id="空间复杂性"><a href="#空间复杂性" class="headerlink" title="空间复杂性"></a>空间复杂性</h3><ul><li></li></ul><h3 id="渐近分析中的5个符号"><a href="#渐近分析中的5个符号" class="headerlink" title="渐近分析中的5个符号"></a>渐近分析中的5个符号</h3>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2020/04/06/hello-world/"/>
+      <url>/2020/04/06/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>

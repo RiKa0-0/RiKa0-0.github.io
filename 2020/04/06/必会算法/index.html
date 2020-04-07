@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, RiKa0-0">
+    <meta name="keywords" content="算法精要总复习（updating）, RiKa0-0">
     <meta name="description" content="绘一纸潇湘，花盏玲珑如妆，雨落弦响，陌上芳华，醉影照天长">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | RiKa0-0</title>
+    <title>算法精要总复习（updating） | RiKa0-0</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -306,12 +306,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">算法精要总复习（updating）</h1>
                 </div>
             </div>
         </div>
@@ -465,16 +465,17 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+                <h1 id="递归和分治"><a href="#递归和分治" class="headerlink" title="递归和分治"></a>递归和分治</h1><h2 id="分治法"><a href="#分治法" class="headerlink" title="分治法"></a>分治法</h2><h2 id="实现二分搜索技术"><a href="#实现二分搜索技术" class="headerlink" title="实现二分搜索技术"></a>实现二分搜索技术</h2><ul>
+<li>范例：  <pre class=" language-c++"><code class="language-c++">#include <iostream>       
+using namespace std;   
+</code></pre>
+</li>
+</ul>
+<p>template<class Type><br>int BinarySearch(Type a[],const Type&amp; x,int n);  </p>
+<p>int main()<br>{<br>    int x = 6;<br>    int a[10];<br>    for(int i=0; i&lt;10; i++)  //初始化一串数组<br>    {<br>        a[i] = i + 1;<br>    }<br>    cout&lt;&lt;BinarySearch(a,x,10)&lt;&lt;endl;  //a数组，x搜索的值，10为长度<br>    return 0;<br>}  </p>
+<p>template<class Type><br>int BinarySearch(Type a[],const Type&amp; x,int n)<br>{<br>    int left = 0;<br>    int right = n-1;<br>    while(left&lt;=right)  //规定区间<br>    {<br>        int mid = (left + right)/2;  //每次取中间的的值<br>        if(x == a[mid])<br>        {<br>            return mid;  //返回下标<br>        }<br>        if(x&gt;a[mid])  //如果小于指定值，<br>        {<br>            left = mid + 1;  //中间位等于最小位<br>        }<br>        else  //如果大于指定值<br>        {<br>            right = mid - 1;  //中间位等于最大位<br>        }<br>    }  </p>
+<pre><code>return -1; }
+```</code></pre>
             </div>
             <hr/>
 
@@ -489,7 +490,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://rika0-0.github.io" rel="external nofollow noreferrer">雨落弦鸣</a>
+                    <a href="http://rika0-0.github.io" rel="external nofollow noreferrer">寒光君</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -499,7 +500,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://rika0-0.github.io/2020/04/06/hello-world/">http://rika0-0.github.io/2020/04/06/hello-world/</a>
+                    <a href="http://rika0-0.github.io/2020/04/06/%E5%BF%85%E4%BC%9A%E7%AE%97%E6%B3%95/">http://rika0-0.github.io/2020/04/06/%E5%BF%85%E4%BC%9A%E7%AE%97%E6%B3%95/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -512,7 +513,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="http://rika0-0.github.io" target="_blank">雨落弦鸣</a>
+                    <a href="http://rika0-0.github.io" target="_blank">寒光君</a>
                     !
                 </span>
             </div>
@@ -706,6 +707,48 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
+                <a href="/2020/04/07/%E7%AE%97%E6%B3%95%E6%9C%9F%E6%9C%AB%E8%AF%95%E9%A2%98%E6%91%98%E5%BD%95/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="算法期末试题摘录">
+                        
+                        <span class="card-title">算法期末试题摘录</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            填空题
+算法的五个重要特性：有穷性、确定性、可行性、0个或多个输入、一个或多个输出。
+
+算法的复杂性有 时间复杂度 和 空间复杂度 之分，衡量一个算法好坏的标准是 时间复杂度高低 。
+
+某一个问题可用动态规划算法求解的显著特征是 该问题具有
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-07
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            寒光君
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
                 <a href="/2020/04/06/%E7%AE%97%E6%B3%95%E7%B2%BE%E8%A6%81%E6%80%BB%E5%A4%8D%E4%B9%A0updating/">
                     <div class="card-image">
                         
@@ -723,55 +766,17 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-06
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            雨落弦鸣
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/04/06/hello-world/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
-                        
-                        <span class="card-title">Hello World</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
-                        
-                    </div>
-                    <div class="publish-info">
                             <span class="publish-date">
                                 <i class="far fa-clock fa-fw icon-date"></i>2020-04-06
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
-                            雨落弦鸣
+                            寒光君
                             
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -961,7 +966,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             <span id="year">2019</span>
-            <a href="http://rika0-0.github.io" target="_blank">雨落弦鸣</a>
+            <a href="http://rika0-0.github.io" target="_blank">寒光君</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>

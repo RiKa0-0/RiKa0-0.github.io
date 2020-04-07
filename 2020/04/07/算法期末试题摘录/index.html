@@ -486,10 +486,17 @@
 </li>
 </ul>
 <h2 id="综合题"><a href="#综合题" class="headerlink" title="综合题"></a>综合题</h2><ol>
-<li>设计动态规划法的步骤<br>1、问题具有最有子结构性质；<br>2、构造最优值我递归关系表达式；<br>3、最优值的算法描述；<br>4、构造最优解</li>
-<li></li>
+<li>设计动态规划法的步骤<br>1、问题具有最有子结构性质；<br>2、构造最优值我递归关系表达式；<br>3、最优值的算法描述；<br>4、构造最优解<h1 id="算法设计思路"><a href="#算法设计思路" class="headerlink" title="算法设计思路"></a>算法设计思路</h1></li>
 </ol>
-
+<h2 id="分治法基本策略"><a href="#分治法基本策略" class="headerlink" title="分治法基本策略"></a>分治法基本策略</h2><pre class=" language-c++"><code class="language-c++">divide-and-conquer(P)
+{
+if ( | P | <= n0) adhoc(P); //解决小规模的问题
+divide P into smaller subinstances P1,P2,...,Pk˗//分解问题
+for (i=1,i<=k,i++)
+yi=divide-and-conquer(Pi); //递归的解格子问题
+return merge(y1,...,yk); //将各子问题的解合并为原问题的解
+}</code></pre>
+<h3 id="二分搜索技术"><a href="#二分搜索技术" class="headerlink" title="二分搜索技术"></a>二分搜索技术</h3><h1 id="程序题"><a href="#程序题" class="headerlink" title="程序题"></a>程序题</h1>
             </div>
             <hr/>
 
@@ -504,7 +511,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://rika0-0.github.io" rel="external nofollow noreferrer">雨落弦鸣</a>
+                    <a href="http://rika0-0.github.io" rel="external nofollow noreferrer">寒光君</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -527,7 +534,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="http://rika0-0.github.io" target="_blank">雨落弦鸣</a>
+                    <a href="http://rika0-0.github.io" target="_blank">寒光君</a>
                     !
                 </span>
             </div>
@@ -749,7 +756,7 @@
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
-                            雨落弦鸣
+                            寒光君
                             
                         </span>
                     </div>
@@ -765,7 +772,7 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/04/06/%E7%AE%97%E6%B3%95%E7%B2%BE%E8%A6%81%E6%80%BB%E5%A4%8D%E4%B9%A0updating/">
+                <a href="/2020/04/06/%E5%BF%85%E4%BC%9A%E7%AE%97%E6%B3%95/">
                     <div class="card-image">
                         
                         
@@ -777,8 +784,13 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            第一章算法的复杂性分析时间复杂性
-在进行算法分析时，语句总的执行次数T(n)是关于问题规模n的函数，进而分析T(n)随n的变化情况并确定T(n)的数量级。算法的时间复杂度，也就是算法的时间量度，记作：T(n)= O(f(n))。它表示随问题
+                            递归和分治分治法实现二分搜索技术
+范例：  #include        
+using namespace std;   
+
+
+
+templateint BinarySearch(Type a[],const Type&amp; x,in
                         
                     </div>
                     <div class="publish-info">
@@ -788,7 +800,7 @@
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
-                            雨落弦鸣
+                            寒光君
                             
                         </span>
                     </div>
@@ -982,7 +994,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             <span id="year">2019</span>
-            <a href="http://rika0-0.github.io" target="_blank">雨落弦鸣</a>
+            <a href="http://rika0-0.github.io" target="_blank">寒光君</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>

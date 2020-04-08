@@ -43,28 +43,6 @@
   
   <entry>
     <title>算法精要总复习（updating）</title>
-    <link href="http://rika0-0.github.io/2020/04/06/%E5%BF%85%E4%BC%9A%E7%AE%97%E6%B3%95/"/>
-    <id>http://rika0-0.github.io/2020/04/06/%E5%BF%85%E4%BC%9A%E7%AE%97%E6%B3%95/</id>
-    <published>2020-04-06T15:01:39.000Z</published>
-    <updated>2020-04-07T10:27:13.865Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="递归和分治"><a href="#递归和分治" class="headerlink" title="递归和分治"></a>递归和分治</h1><h2 id="分治法"><a href="#分治法" class="headerlink" title="分治法"></a>分治法</h2><h2 id="实现二分搜索技术"><a href="#实现二分搜索技术" class="headerlink" title="实现二分搜索技术"></a>实现二分搜索技术</h2><ul><li>范例：  <pre class=" language-c++"><code class="language-c++">#include <iostream>       using namespace std;   </code></pre></li></ul><p>template<class Type><br>int BinarySearch(Type a[],const Type&amp; x,int n);  </p><p>int main()<br>{<br>    int x = 6;<br>    int a[10];<br>    for(int i=0; i&lt;10; i++)  //初始化一串数组<br>    {<br>        a[i] = i + 1;<br>    }<br>    cout&lt;&lt;BinarySearch(a,x,10)&lt;&lt;endl;  //a数组，x搜索的值，10为长度<br>    return 0;<br>}  </p><p>template<class Type><br>int BinarySearch(Type a[],const Type&amp; x,int n)<br>{<br>    int left = 0;<br>    int right = n-1;<br>    while(left&lt;=right)  //规定区间<br>    {<br>        int mid = (left + right)/2;  //每次取中间的的值<br>        if(x == a[mid])<br>        {<br>            return mid;  //返回下标<br>        }<br>        if(x&gt;a[mid])  //如果小于指定值，<br>        {<br>            left = mid + 1;  //中间位等于最小位<br>        }<br>        else  //如果大于指定值<br>        {<br>            right = mid - 1;  //中间位等于最大位<br>        }<br>    }  </p><pre><code>return -1; }```</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;递归和分治&quot;&gt;&lt;a href=&quot;#递归和分治&quot; class=&quot;headerlink&quot; title=&quot;递归和分治&quot;&gt;&lt;/a&gt;递归和分治&lt;/h1&gt;&lt;h2 id=&quot;分治法&quot;&gt;&lt;a href=&quot;#分治法&quot; class=&quot;headerlink&quot; title=&quot;分治法&quot;&gt;&lt;/
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>算法精要总复习（updating）</title>
     <link href="http://rika0-0.github.io/2020/04/06/%E7%AE%97%E6%B3%95%E7%B2%BE%E8%A6%81%E6%80%BB%E5%A4%8D%E4%B9%A0updating/"/>
     <id>http://rika0-0.github.io/2020/04/06/%E7%AE%97%E6%B3%95%E7%B2%BE%E8%A6%81%E6%80%BB%E5%A4%8D%E4%B9%A0updating/</id>
     <published>2020-04-06T15:01:39.000Z</published>
@@ -77,6 +55,28 @@
       
       
         &lt;h1 id=&quot;第一章&quot;&gt;&lt;a href=&quot;#第一章&quot; class=&quot;headerlink&quot; title=&quot;第一章&quot;&gt;&lt;/a&gt;第一章&lt;/h1&gt;&lt;h2 id=&quot;算法的复杂性分析&quot;&gt;&lt;a href=&quot;#算法的复杂性分析&quot; class=&quot;headerlink&quot; title=&quot;算法的复杂
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>算法精要总复习（updating）</title>
+    <link href="http://rika0-0.github.io/2020/04/06/%E5%BF%85%E4%BC%9A%E7%AE%97%E6%B3%95/"/>
+    <id>http://rika0-0.github.io/2020/04/06/%E5%BF%85%E4%BC%9A%E7%AE%97%E6%B3%95/</id>
+    <published>2020-04-06T15:01:39.000Z</published>
+    <updated>2020-04-07T10:27:13.865Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="递归和分治"><a href="#递归和分治" class="headerlink" title="递归和分治"></a>递归和分治</h1><h2 id="分治法"><a href="#分治法" class="headerlink" title="分治法"></a>分治法</h2><h2 id="实现二分搜索技术"><a href="#实现二分搜索技术" class="headerlink" title="实现二分搜索技术"></a>实现二分搜索技术</h2><ul><li>范例：  <pre class=" language-c++"><code class="language-c++">#include <iostream>       using namespace std;   </code></pre></li></ul><p>template<class Type><br>int BinarySearch(Type a[],const Type&amp; x,int n);  </p><p>int main()<br>{<br>    int x = 6;<br>    int a[10];<br>    for(int i=0; i&lt;10; i++)  //初始化一串数组<br>    {<br>        a[i] = i + 1;<br>    }<br>    cout&lt;&lt;BinarySearch(a,x,10)&lt;&lt;endl;  //a数组，x搜索的值，10为长度<br>    return 0;<br>}  </p><p>template<class Type><br>int BinarySearch(Type a[],const Type&amp; x,int n)<br>{<br>    int left = 0;<br>    int right = n-1;<br>    while(left&lt;=right)  //规定区间<br>    {<br>        int mid = (left + right)/2;  //每次取中间的的值<br>        if(x == a[mid])<br>        {<br>            return mid;  //返回下标<br>        }<br>        if(x&gt;a[mid])  //如果小于指定值，<br>        {<br>            left = mid + 1;  //中间位等于最小位<br>        }<br>        else  //如果大于指定值<br>        {<br>            right = mid - 1;  //中间位等于最大位<br>        }<br>    }  </p><pre><code>return -1; }```</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;递归和分治&quot;&gt;&lt;a href=&quot;#递归和分治&quot; class=&quot;headerlink&quot; title=&quot;递归和分治&quot;&gt;&lt;/a&gt;递归和分治&lt;/h1&gt;&lt;h2 id=&quot;分治法&quot;&gt;&lt;a href=&quot;#分治法&quot; class=&quot;headerlink&quot; title=&quot;分治法&quot;&gt;&lt;/
       
     
     </summary>

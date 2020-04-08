@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="RiKa0-0">
+    <meta name="keywords" content="标签: 算法, RiKa0-0">
     <meta name="description" content="绘一纸潇湘，花盏玲珑如妆，雨落弦响，陌上芳华，醉影照天长">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>RiKa0-0</title>
+    <title>标签: 算法 | RiKa0-0</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -240,63 +240,9 @@
 
 </header>
 
-    
-<style>
-    .carousel-control {
-        width: 45px;
-        height: 45px;
-        line-height: 55px;
-        border-radius: 45px;
-        background: transparent;
-        cursor: pointer;
-        z-index: 100;
-    }
-
-    #prev-cover {
-        position: absolute;
-        top: 48%;
-        left: 8px;
-    }
-
-    #next-cover {
-        position: absolute;
-        top: 48%;
-        right: 8px;;
-    }
-
-    #prev-cover i {
-        margin-right: 3px;
-    }
-
-    #next-cover i {
-        margin-left: 3px;
-    }
-
-    .carousel-control:hover {
-        background-color: rgba(0, 0, 0, .4);
-    }
-
-    .carousel-control i {
-        color: #fff;
-        font-size: 2.4rem;
-    }
-</style>
-
-
-
-<div class="carousel carousel-slider center index-cover" data-indicators="true" style="margin-top: -64px;">
-    
-        <div id="prev-cover" class="left waves-effect carousel-control">
-            <i class="icon fa fa-angle-left"></i>
-        </div>
-        <div id="next-cover" class="right waves-effect carousel-control">
-            <i class="icon fa fa-angle-right"></i>
-        </div>
-    
-
-    <div class="carousel-item red white-text bg-cover about-cover">
-        <div class="container">
-            <div class="row">
+    <div class="bg-cover pd-header about-cover">
+    <div class="container">
+    <div class="row">
     <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
         <div class="brand">
             <div class="title center-align">
@@ -332,330 +278,63 @@
 </script>
 
 
-
-            <div class="cover-btns">
-                <a href="#indexCard" class="waves-effect waves-light btn">
-                    <i class="fa fa-angle-double-down"></i>开始阅读
-                </a>
-
-                
-            </div>
-            <div class="cover-social-link">
-    <a href="https://github.com/RiKa0-0" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
-        <i class="fab fa-github"></i>
-    </a>
-
-
-
-    <a href="mailto:2206491416@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
-        <i class="fas fa-envelope-open"></i>
-    </a>
-
-
-
-
-
-
-
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2206491416" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 2206491416" data-position="top" data-delay="50">
-        <i class="fab fa-qq"></i>
-    </a>
-
-
-
-
-
-
-
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
-        <i class="fas fa-rss"></i>
-    </a>
-
-</div>
-        </div>
     </div>
-
-    
-        
-
-        
-            
-            <div class="carousel-item amber white-text carousel-post bg-cover"
-                 style="background-image: url('/medias/featureimages/10.jpg');">
-                <div class="container">
-                    <div class="row">
-                        <div class="col s10 offset-s1">
-                            <div class="title center-align">博客说明</div>
-                            <div class="description center-align">
-                                
-                                    这里只是简单写点自我介绍
-除了“码农”的身份我还有和“作家”的工作，所以我在各个平台的更新频率比较低哈~知道没人催我的，YY一下。
-目前本科在读，
-所学专业：计算机
-工作经验：社团街舞老师（因伤下岗）、网络作家（在职）
-B站昵称：雨落弦鸣
-
-                                
-                            </div>
-                            <div class="cover-btns">
-                                <a href="/2020/04/08/%E5%8D%9A%E5%AE%A2%E8%AF%B4%E6%98%8E/" class="waves-effect waves-light btn"
-                                   target="_blank">
-                                    <i class="icon fa fa-eye fa-fw"></i>阅读更多
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-    
 </div>
-
-<script>
-    // TODO 此处的轮播尚需优化，PC/Mobile 在触摸切换时都感觉相当不灵活
-    $(function () {
-        let coverSlider = $('.carousel');
-
-        //用户触摸轮播自动 restartPlay 是否生效
-        let initUserPressedOrDraggedActive = false
-
-        //用户触摸轮播自动 restartPlay
-        function initUserPressedOrDragged(instance) {
-            setInterval(() => {
-                if (instance.pressed || instance.dragged) {
-                    // console.log('initUserPressedOrDragged: ',instance.pressed,instance.dragged)
-                    restartPlay()
-                }
-            }, 1000)
-        }
-
-        coverSlider.carousel({
-            duration: Number('120'),
-            fullWidth: true,
-            indicators: 'true' === 'true',
-            onCycleTo() {
-                if (!initUserPressedOrDraggedActive) {
-                    // console.log('initUserPressedOrDraggedActive')
-                    initUserPressedOrDragged(this)
-                    initUserPressedOrDraggedActive = true
-                }
-            },
-        })
-
-        let carouselIntervalId;
-        
-        // Loop to call the next cover article picture.
-        let autoCarousel = function () {
-            carouselIntervalId = setInterval(function () {
-                coverSlider.carousel('next');
-            }, 5000);
-        };
-        autoCarousel();
-        
-
-        function restartPlay() {
-            
-            clearInterval(carouselIntervalId);
-            autoCarousel();
-            
-        };
-
-        
-        // prev and next cover post.
-        $('#prev-cover').click(function () {
-            coverSlider.carousel('prev');
-            restartPlay();
-        });
-        $('#next-cover').click(function () {
-            coverSlider.carousel('next');
-            restartPlay();
-        });
-        
-    });
-</script>
-
-
 
 <main class="content">
 
     
-    <div id="indexCard" class="index-card">
-        <div class="container ">
-            <div class="card">
-                <div class="card-content">
-                    
-                        <div class="dream">
-    
-    <div class="title center-align">
-        <i class="far fa-lightbulb"></i>&nbsp;&nbsp;个性签名
-    </div>
-    
-    <div class="row">
-        <div class="col l8 offset-l2 m10 offset-m1 s10 offset-s1 center-align text">
-            骨子里文艺的人,一半柴米油盐酱醋茶,一半琴棋书画诗酒花,满头霜雪走过半生,抬眼之处,仍是少年出世之年。
-        </div>
-    </div>
-</div>
-                    
 
-                    
-
-                    
-
-                    
-                    <div id="recommend-sections" class="recommend">
-                        
-
-
-
-
-
-<div class="title"><i class="far fa-thumbs-up"></i>&nbsp;&nbsp;推荐文章</div>
-
-<div class="row">
-
-    
-    
-    <div class="col s12" >
-        <div class="post-card" style="background-image: url('//medias/featureimages/10.jpg')">
-            <div class="post-body">
-                <div class="post-categories">
-                    
-                        
-                    
-                </div>
-                <a href="/2020/04/08/%E5%8D%9A%E5%AE%A2%E8%AF%B4%E6%98%8E/">
-                    <h3 class="post-title">博客说明</h3>
+<div id="tags" class="container chip-container">
+    <div class="card">
+        <div class="card-content">
+            <div class="tag-title center-align">
+                <i class="fas fa-tags"></i>&nbsp;&nbsp;文章标签
+            </div>
+            <div class="tag-chips">
+                
+                
+                <a href="/tags/%E5%85%B3%E4%BA%8E%E6%88%91/" title="关于我: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="关于我" style="background-color: #F9EBEA;">关于我
+                        <span class="tag-length">1</span>
+                    </span>
                 </a>
-                <p class="post-description">这里只是简单写点自我介绍
-除了“码农”的身份我还有和“作家”的工作，所以我在各个平台的更新频率比较低哈~知道没人催我的，YY一下。
-目前本科在读，
-所学专业：计算机
-工作</p>
-                <a href="/2020/04/08/%E5%8D%9A%E5%AE%A2%E8%AF%B4%E6%98%8E/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FF5E3A 0%, #FF2A68 100%)" target="_blank">
-                    <i class="icon far fa-eye fa-fw"></i>阅读更多
+                
+                
+                <a href="/tags/%E7%AE%97%E6%B3%95/" title="算法: 3">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-active "
+                            data-tagname="算法" style="background-color: #F5EEF8;">算法
+                        <span class="tag-length">3</span>
+                    </span>
                 </a>
+                
+                
+                <a href="/tags/web/" title="web: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="web" style="background-color: #D5F5E3;">web
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
             </div>
         </div>
     </div>
-    
-
 </div>
 
-
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
     
 
-    
-
-    <!-- 所有文章卡片 -->
     <article id="articles" class="container articles">
-        <div class="row article-row">
+        <div class="row tags-posts">
             
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2020/04/08/%E5%8D%9A%E5%AE%A2%E8%AF%B4%E6%98%8E/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="博客说明">
-                            
-                            <span class="card-title">博客说明</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                这里只是简单写点自我介绍
-除了“码农”的身份我还有和“作家”的工作，所以我在各个平台的更新频率比较低哈~知道没人催我的，YY一下。
-目前本科在读，
-所学专业：计算机
-工作经验：社团街舞老师（因伤下岗）、网络作家（在职）
-B站昵称：雨落弦鸣
-
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-08
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                寒光君
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E5%85%B3%E4%BA%8E%E6%88%91/">
-                            <span class="chip bg-color">关于我</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
             
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2020/04/08/%E6%9C%80%E5%BF%AB%E9%80%9F%E5%9C%B0%E6%90%AD%E5%BB%BA%E7%82%AB%E4%B8%BD%E7%9A%84%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99or%E5%8D%9A%E5%AE%A2/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="最快速地搭建炫丽的个人网站or博客">
-                            
-                            <span class="card-title">最快速地搭建炫丽的个人网站or博客</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                网站搭建视频教程地址：B站视频地址1.nodejs，Git环境搭建：
-nodejs搭建教程:
-
-注意了，像Git这种服务器在国外的东西，它的官网下载这个软件会非常慢，建议直接在百度上搜索git下载与安装，各种软件园都能直接快速下载，留一下版
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-08
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                寒光君
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/web/">
-                            <span class="chip bg-color">web</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
+            <div class="article tag-post col s12 m6 l4" data-tags="算法" data-aos="fade-up">
                 <div class="card">
                     <a href="/2020/04/07/%E7%AE%97%E6%B3%95%E6%9C%9F%E6%9C%AB%E8%AF%95%E9%A2%98%E6%91%98%E5%BD%95/">
-                        <div class="card-image">
+                        <div class="card-image tag-image">
                             
                             
                             <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="算法期末试题摘录">
@@ -663,18 +342,7 @@ nodejs搭建教程:
                             <span class="card-title">算法期末试题摘录</span>
                         </div>
                     </a>
-
                     <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                填空题
-算法的五个重要特性：有穷性、确定性、可行性、0个或多个输入、一个或多个输出。
-
-算法的复杂性有 时间复杂度 和 空间复杂度 之分，衡量一个算法好坏的标准是 时间复杂度高低 。
-
-某一个问题可用动态规划算法求解的显著特征是 该问题具有
-                            
-                        </div>
                         <div class="publish-info">
                             <span class="publish-date">
                                 <i class="far fa-clock fa-fw icon-date"></i>2020-04-07
@@ -687,72 +355,14 @@ nodejs搭建教程:
                             </span>
                         </div>
                     </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E7%AE%97%E6%B3%95/">
-                            <span class="chip bg-color">算法</span>
-                        </a>
-                        
-                    </div>
-                    
                 </div>
             </div>
             
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2020/04/06/%E5%BF%85%E4%BC%9A%E7%AE%97%E6%B3%95/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="算法精要总复习（updating）">
-                            
-                            <span class="card-title">算法精要总复习（updating）</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                递归和分治分治法实现二分搜索技术
-范例：  #include        
-using namespace std;   
-
-
-
-templateint BinarySearch(Type a[],const Type&amp; x,in
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-06
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                寒光君
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E7%AE%97%E6%B3%95/">
-                            <span class="chip bg-color">算法</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
             
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
+            <div class="article tag-post col s12 m6 l4" data-tags="算法" data-aos="fade-up">
                 <div class="card">
                     <a href="/2020/04/06/%E7%AE%97%E6%B3%95%E7%B2%BE%E8%A6%81%E6%80%BB%E5%A4%8D%E4%B9%A0updating/">
-                        <div class="card-image">
+                        <div class="card-image tag-image">
                             
                             
                             <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="算法精要总复习（updating）">
@@ -760,14 +370,7 @@ templateint BinarySearch(Type a[],const Type&amp; x,in
                             <span class="card-title">算法精要总复习（updating）</span>
                         </div>
                     </a>
-
                     <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                第一章算法的复杂性分析时间复杂性
-在进行算法分析时，语句总的执行次数T(n)是关于问题规模n的函数，进而分析T(n)随n的变化情况并确定T(n)的数量级。算法的时间复杂度，也就是算法的时间量度，记作：T(n)= O(f(n))。它表示随问题
-                            
-                        </div>
                         <div class="publish-info">
                             <span class="publish-date">
                                 <i class="far fa-clock fa-fw icon-date"></i>2020-04-06
@@ -780,22 +383,39 @@ templateint BinarySearch(Type a[],const Type&amp; x,in
                             </span>
                         </div>
                     </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E7%AE%97%E6%B3%95/">
-                            <span class="chip bg-color">算法</span>
-                        </a>
-                        
+                </div>
+            </div>
+            
+            
+            <div class="article tag-post col s12 m6 l4" data-tags="算法" data-aos="fade-up">
+                <div class="card">
+                    <a href="/2020/04/06/%E5%BF%85%E4%BC%9A%E7%AE%97%E6%B3%95/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="算法精要总复习（updating）">
+                            
+                            <span class="card-title">算法精要总复习（updating）</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-06
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-user fa-fw"></i>
+                                寒光君
+                                
+                            </span>
+                        </div>
                     </div>
-                    
                 </div>
             </div>
             
         </div>
     </article>
-
 </main>
 
 

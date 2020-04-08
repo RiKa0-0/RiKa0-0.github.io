@@ -4,11 +4,30 @@
   
     
     <entry>
+      <title>博客说明</title>
+      <link href="/2020/04/08/%E5%8D%9A%E5%AE%A2%E8%AF%B4%E6%98%8E/"/>
+      <url>/2020/04/08/%E5%8D%9A%E5%AE%A2%E8%AF%B4%E6%98%8E/</url>
+      
+        <content type="html"><![CDATA[<h1 id="这里只是简单写点自我介绍"><a href="#这里只是简单写点自我介绍" class="headerlink" title="这里只是简单写点自我介绍"></a>这里只是简单写点自我介绍</h1><ul><li>除了“码农”的身份我还有和“作家”的工作，所以我在各个平台的更新频率比较低哈~知道没人催我的，YY一下。</li><li>目前本科在读，</li><li>所学专业：计算机</li><li>工作经验：社团街舞老师（因伤下岗）、网络作家（在职）</li><li>B站昵称：雨落弦鸣</li><li>笔名（保密）</li><li>特长：舞蹈，大多数体育类项目。</li><li>爱好：钢琴、绘画、美工设计、视频摄影、古风</li><li>最喜欢的音乐：《穿越时空的思念》</li><li>最喜欢的舞种：中国舞、breaking</li><li>最享受的生活：听轻音乐、钢琴曲，在案头写故事，抬眼时，庭前花开花落，天空云卷云舒；饿时上街带一小肉，分给我还有我的小猫们。</li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 关于我 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>最快速地搭建炫丽的个人网站or博客</title>
       <link href="/2020/04/08/%E6%9C%80%E5%BF%AB%E9%80%9F%E5%9C%B0%E6%90%AD%E5%BB%BA%E7%82%AB%E4%B8%BD%E7%9A%84%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99or%E5%8D%9A%E5%AE%A2/"/>
       <url>/2020/04/08/%E6%9C%80%E5%BF%AB%E9%80%9F%E5%9C%B0%E6%90%AD%E5%BB%BA%E7%82%AB%E4%B8%BD%E7%9A%84%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99or%E5%8D%9A%E5%AE%A2/</url>
       
-        <content type="html"><![CDATA[<h1 id="网站搭建"><a href="#网站搭建" class="headerlink" title="网站搭建"></a>网站搭建</h1><h2 id="1-nodejs，Git环境搭建："><a href="#1-nodejs，Git环境搭建：" class="headerlink" title="1.nodejs，Git环境搭建："></a>1.nodejs，Git环境搭建：</h2><ul><li><p><a href="https://blog.csdn.net/qq_43285335/article/details/90696126" target="_blank" rel="noopener">nodejs搭建教程:</a></p></li><li><p>注意了，像Git这种服务器在国外的东西，它的官网下载这个软件会非常慢，建议直接在百度上搜索git下载与安装，各种软件园都能直接快速下载，留一下版本最好不要太旧就行。</p></li><li><p><a href="https://www.cnblogs.com/xueweisuoyong/p/11914045.html" target="_blank" rel="noopener">git搭建教程：</a></p></li><li><p><a href="https://jingyan.baidu.com/article/e8cdb32b0ce12137042bad51.html" target="_blank" rel="noopener">补充参考文档（可能你会用到）：</a></p></li><li><p><a href="https://www.cnblogs.com/luyuandatabase/p/12145707.html" target="_blank" rel="noopener">配置淘宝云</a></p><h2 id="2-注册GitHub账号并创建仓库"><a href="#2-注册GitHub账号并创建仓库" class="headerlink" title="2.注册GitHub账号并创建仓库"></a>2.注册GitHub账号并创建仓库</h2><ol><li>注册就不用我说了，创建仓库视频里有，然后这个也很简单，不会就百度（应该没人去百度的，太简单了）</li><li>格式要求：gfyuan.github.io</li><li>下面两个东西选其一我在视频里面没有演示，因为我早已经弄好了，你们看着弄。</li><li><a href="https://www.xuanfengge.com/using-ssh-key-link-github-photo-tour.html" target="_blank" rel="noopener">参考文档（可能用到）——GitHub的ssh密匙添加：</a></li><li><a href="https://www.jianshu.com/p/3f4b2ede5a93" target="_blank" rel="noopener">参考文档（可能用到）——Gitee的ssh密匙添加：</a></li></ol><h2 id="3-快速利用hexo搭建博客："><a href="#3-快速利用hexo搭建博客：" class="headerlink" title="3.快速利用hexo搭建博客："></a>3.快速利用hexo搭建博客：</h2><ol><li><a href="https://hexoscript.gitbook.io/hexo-script/" target="_blank" rel="noopener">脚本教程</a></li><li><a href="https://blog.csdn.net/jspnetcn/article/details/104111651" target="_blank" rel="noopener">matery主题安装及优化</a></li></ol></li></ul><p><a href="https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md" target="_blank" rel="noopener">matery主题官网：</a></p><h2 id="博客搭建完成"><a href="#博客搭建完成" class="headerlink" title="博客搭建完成"></a>博客搭建完成</h2><p><a href="https://rika0-0.github.io/">我的博客</a></p><h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><ul><li>自行下载</li><li>vs code</li></ul><h2 id="需要的编辑软件"><a href="#需要的编辑软件" class="headerlink" title="需要的编辑软件"></a>需要的编辑软件</h2><ul><li>Typora<br>个人建议在国内的网站上面下载，不要去官网，下载慢</li><li>VS code<br>轻量级文档编辑器</li></ul><h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p> <img src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1586329259&di=4b52fb528ca0962c5b80fef165441db4&src=http://image.cilacila.com/uploads/20190112/21/1547301428-yHBpuVbPFO.jpg" alt=""></p><h2 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h2><p> <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">VScode下载地址</a></p>]]></content>
+        <content type="html"><![CDATA[<h1 id="网站搭建"><a href="#网站搭建" class="headerlink" title="网站搭建"></a>网站搭建</h1><h2 id="视频教程地址：B站视频地址"><a href="#视频教程地址：B站视频地址" class="headerlink" title="视频教程地址：B站视频地址"></a>视频教程地址：<a href="https://www.bilibili.com/video/BV1je41147Ma/" target="_blank" rel="noopener">B站视频地址</a></h2><h2 id="1-nodejs，Git环境搭建："><a href="#1-nodejs，Git环境搭建：" class="headerlink" title="1.nodejs，Git环境搭建："></a>1.nodejs，Git环境搭建：</h2><ul><li><p><a href="https://blog.csdn.net/qq_43285335/article/details/90696126" target="_blank" rel="noopener">nodejs搭建教程:</a></p></li><li><p>注意了，像Git这种服务器在国外的东西，它的官网下载这个软件会非常慢，建议直接在百度上搜索git下载与安装，各种软件园都能直接快速下载，留一下版本最好不要太旧就行。</p></li><li><p><a href="https://www.cnblogs.com/xueweisuoyong/p/11914045.html" target="_blank" rel="noopener">git搭建教程：</a></p></li><li><p><a href="https://jingyan.baidu.com/article/e8cdb32b0ce12137042bad51.html" target="_blank" rel="noopener">补充参考文档（可能你会用到）：</a></p></li><li><p><a href="https://www.cnblogs.com/luyuandatabase/p/12145707.html" target="_blank" rel="noopener">配置淘宝云</a></p><h2 id="2-注册GitHub账号并创建仓库"><a href="#2-注册GitHub账号并创建仓库" class="headerlink" title="2.注册GitHub账号并创建仓库"></a>2.注册GitHub账号并创建仓库</h2><ol><li>注册就不用我说了，创建仓库视频里有，然后这个也很简单，不会就百度（应该没人去百度的，太简单了）</li><li>格式要求：gfyuan.github.io</li><li>下面两个东西选其一我在视频里面没有演示，因为我早已经弄好了，你们看着弄。</li><li><a href="https://www.xuanfengge.com/using-ssh-key-link-github-photo-tour.html" target="_blank" rel="noopener">参考文档（可能用到）——GitHub的ssh密匙添加：</a></li><li><a href="https://www.jianshu.com/p/3f4b2ede5a93" target="_blank" rel="noopener">参考文档（可能用到）——Gitee的ssh密匙添加：</a></li></ol><h2 id="3-快速利用hexo搭建博客："><a href="#3-快速利用hexo搭建博客：" class="headerlink" title="3.快速利用hexo搭建博客："></a>3.快速利用hexo搭建博客：</h2><ol><li><a href="https://hexoscript.gitbook.io/hexo-script/" target="_blank" rel="noopener">脚本教程</a></li><li><a href="https://blog.csdn.net/jspnetcn/article/details/104111651" target="_blank" rel="noopener">matery主题安装及优化</a></li></ol></li></ul><p><a href="https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md" target="_blank" rel="noopener">matery主题官网：</a></p><h2 id="博客搭建完成"><a href="#博客搭建完成" class="headerlink" title="博客搭建完成"></a>博客搭建完成</h2><p><a href="https://rika0-0.github.io/">我的博客</a></p><h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><ul><li>自行下载</li><li>vs code</li></ul><h2 id="需要的编辑软件"><a href="#需要的编辑软件" class="headerlink" title="需要的编辑软件"></a>需要的编辑软件</h2><ul><li>Typora<br>个人建议在国内的网站上面下载，不要去官网，下载慢</li><li>VS code<br>轻量级文档编辑器</li></ul><h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p> <img src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1586329259&di=4b52fb528ca0962c5b80fef165441db4&src=http://image.cilacila.com/uploads/20190112/21/1547301428-yHBpuVbPFO.jpg" alt=""></p><h2 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h2><p> <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">VScode下载地址</a></p>]]></content>
       
       
       
@@ -31,6 +50,12 @@
       
       
       
+        <tags>
+            
+            <tag> 算法 </tag>
+            
+        </tags>
+      
     </entry>
     
     
@@ -44,6 +69,12 @@
       
       
       
+        <tags>
+            
+            <tag> 算法 </tag>
+            
+        </tags>
+      
     </entry>
     
     
@@ -56,6 +87,12 @@
         <content type="html"><![CDATA[<h1 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h1><h2 id="算法的复杂性分析"><a href="#算法的复杂性分析" class="headerlink" title="算法的复杂性分析"></a>算法的复杂性分析</h2><h3 id="时间复杂性"><a href="#时间复杂性" class="headerlink" title="时间复杂性"></a>时间复杂性</h3><ul><li>在进行算法分析时，语句总的执行次数T(n)是关于问题规模n的函数，进而分析T(n)随n的变化情况并确定T(n)的数量级。算法的时间复杂度，也就是算法的时间量度，记作：T(n)= O(f(n))。它表示随问题规模n的增大，算法执行时间的增长率和f(n)的增长率相同，称作算法的渐近时间复杂度，简称为时间复杂度。其中f(n)是问题规模n的某个函数。<br>用大写O()来体现算法时间复杂度的记法，我们称之为大O记法。<br>一般情况下，随着输入规模n的增大，T(n)增长最慢的算法为最优算法。</li></ul><ol><li>推导大O阶方法   </li></ol><p>如何分析一个算法的时间复杂度呢？即如何推导大O阶呢？  </p><p>用常数1取代运行时间中的所有加法常数。  </p><p>在修改后的运行次数函数中，只保留最高阶项。 </p><p>如果最高阶项存在且不是1，则去除与这个项相乘的常数。 </p><p>得到的最后结果就是大O阶。</p><h4 id="例题："><a href="#例题：" class="headerlink" title="例题："></a>例题：</h4><ul><li><p>常数阶</p><pre class=" language-c++"><code class="language-c++">int sum = 0, n = 100;printf(“I love you.com\n”);printf(“I love you.com\n”);printf(“I love you.com\n”);printf(“I love you.com\n”);printf(“I love you.com\n”);printf(“I love you.com\n”);sum = (1+n)*n/2;</code></pre><p>第一条就说明了所有加法常数给他个O(1)即可</p></li><li><p>线性阶   </p></li></ul><p>一般含有非嵌套循环涉及线性阶，线性阶就是随着问题规模n的扩大，对应计算次数呈直线增长.<br>这段代码，它的循环的时间复杂度为O(n)，因为循环体中的代码需要执行n次。</p><pre class=" language-c++"><code class="language-c++">int i , n = 100, sum = 0;for( i=0; i < n; i++ ){    sum = sum + i;}</code></pre><ul><li>平方阶<br>n等于100，也就是说外层循环每执行一次，内层循环就执行100次，那总共程序想要从这两个循环出来，需要执行100*100次，也就是n的平方。所以这段代码的时间复杂度为O(n^2)。<pre class=" language-c++"><code class="language-c++">int i, j, n = 100;for( i=0; i < n; i++ ){  for( j=0; j < n; j++ )  {      printf(“I love FishC.com\n”);  }}</code></pre></li><li>对数阶<br>由于每次i*2之后，就距离n更近一步，假设有x个2相乘后大于或等于n，则会退出循环。<br>于是由2^x = n得到x = log(2)n，所以这个循环的时间复杂度为O(logn)。<pre class=" language-c++"><code class="language-c++">int i = 1, n = 100;while( i < n ){  i = i * 2;}</code></pre></li><li>函数调用的时间复杂度分析<br><img src="https://upload-images.jianshu.io/upload_images/4807654-9d3b7f58b405a618.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/659/format/webp" alt=""></li></ul><h3 id="空间复杂性"><a href="#空间复杂性" class="headerlink" title="空间复杂性"></a>空间复杂性</h3><ul><li>算法的空间复杂度通过计算算法所需的存储空间实现，算法的空间复杂度的计算公式记作：S(n)=O(f(n))，其中，n为问题的规模，f(n)为语句关于n所占存储空间的函数。  </li><li>通常，我们都是用“时间复杂度”来指运行时间的需求，是用“空间复杂度”指空间需求。<br>当直接要让我们求“复杂度”时，通常指的是时间复杂度。<br>显然对时间复杂度的追求更是属于算法的潮流！<h3 id="渐近分析中的5个符号"><a href="#渐近分析中的5个符号" class="headerlink" title="渐近分析中的5个符号"></a>渐近分析中的5个符号</h3></li><li>渐近精确界记号：ΘΘ（big-theta）</li><li>渐近上界记号：OO(big-oh)</li><li>渐近下界记号：ΩΩ(big-omege)</li><li>非渐近紧确上界：o(小-oh)</li><li>非渐近紧确下界：ω(小-omege)<h1 id="第二章-递归与分治策略"><a href="#第二章-递归与分治策略" class="headerlink" title="第二章 递归与分治策略"></a>第二章 递归与分治策略</h1><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2></li></ul>]]></content>
       
       
+      
+        <tags>
+            
+            <tag> 算法 </tag>
+            
+        </tags>
       
     </entry>
     

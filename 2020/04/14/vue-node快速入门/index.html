@@ -1,0 +1,1799 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="vue+node快速入门, RiKa0-0">
+    <meta name="description" content="绘一纸潇湘，花盏玲珑如妆，雨落弦响，陌上芳华，醉影照天长">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>vue+node快速入门 | RiKa0-0</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+    
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="RiKa0-0" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">RiKa0-0</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">RiKa0-0</div>
+        <div class="logo-desc">
+            
+            绘一纸潇湘，花盏玲珑如妆，雨落弦响，陌上芳华，醉影照天长
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">vue+node快速入门</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+        
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    .toc-fixed .toc-link::before{
+        position: fixed!important;/*当toc的位置改为fixed时，.toc-link::before也要改为fixed*/
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/vue/">
+                                <span class="chip bg-color">vue</span>
+                            </a>
+                        
+                            <a href="/tags/node/">
+                                <span class="chip bg-color">node</span>
+                            </a>
+                        
+                            <a href="/tags/es6/">
+                                <span class="chip bg-color">es6</span>
+                            </a>
+                        
+                            <a href="/tags/webpack/">
+                                <span class="chip bg-color">webpack</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                <span class="chip bg-color">前端</span>
+                            </a>
+                        
+                            <a href="/tags/npm/">
+                                <span class="chip bg-color">npm</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-04-14
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2020-04-15
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    6.8k
+                </div>
+                
+
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="前端知识快速整理"><a href="#前端知识快速整理" class="headerlink" title="前端知识快速整理"></a>前端知识快速整理</h1><h2 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h2><h3 id="一、ECMAScript-6-简介"><a href="#一、ECMAScript-6-简介" class="headerlink" title="一、ECMAScript 6 简介"></a>一、ECMAScript 6 简介</h3><p>ECMAScript 6.0（以下简称 ES6）是 JavaScript 语言的下一代标准，已经在 2015 年 6 月正式发布了。它的目标，是使得 JavaScript 语言可以用来编写复杂的大型应用程序，成为企业级开发语言。<br>1、ECMAScript 和 JavaScript 的关系<br>一个常见的问题是，ECMAScript 和 JavaScript 到底是什么关系？</p>
+<p>要讲清楚这个问题，需要回顾历史。1996 年 11 月，JavaScript 的创造者 Netscape 公司，决定将 JavaScript 提交给标准化组织 ECMA，希望这种语言能够成为国际标准。次年，ECMA 发布 262 号标准文件（ECMA-262）的第一版，规定了浏览器脚本语言的标准，并将这种语言称为 ECMAScript，这个版本就是 1.0 版。</p>
+<p>因此，ECMAScript 和 JavaScript 的关系是，前者是后者的规格，后者是前者的一种实现（另外的 ECMAScript 方言还有 Jscript 和 ActionScript）</p>
+<p>2、ES6 与 ECMAScript 2015 的关系<br>ECMAScript 2015（简称 ES2015）这个词，也是经常可以看到的。它与 ES6 是什么关系呢？</p>
+<p>2011 年，ECMAScript 5.1 版发布后，就开始制定 6.0 版了。因此，ES6 这个词的原意，就是指 JavaScript 语言的下一个版本。</p>
+<p>ES6 的第一个版本，在 2015 年 6 月发布，正式名称是《ECMAScript 2015 标准》（简称 ES2015）。</p>
+<p>2016 年 6 月，小幅修订的《ECMAScript 2016 标准》（简称 ES2016）如期发布，这个版本可以看作是 ES6.1 版，因为两者的差异非常小，基本上是同一个标准。根据计划，2017 年 6 月发布 ES2017 标准。</p>
+<p>因此，ES6 既是一个历史名词，也是一个泛指，含义是 5.1 版以后的 JavaScript 的下一代标准，涵盖了 ES2015、ES2016、ES2017 等等，而 ES2015 则是正式名称，特指该年发布的正式版本的语言标准。本书中提到 ES6 的地方，一般是指 ES2015 标准，但有时也是泛指“下一代 JavaScript 语言”。</p>
+<h3 id="二、基本语法"><a href="#二、基本语法" class="headerlink" title="二、基本语法"></a>二、基本语法</h3><p>ES标准中不包含 DOM 和 BOM的定义，只涵盖基本数据类型、关键字、语句、运算符、内建对象、内建函数等通用语法。</p>
+<p>本部分只学习前端开发中ES6的最少必要知识，方便后面项目开发中对代码的理解。</p>
+<p>1、let声明变量<br>创建 let.html</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// var 声明的变量没有局部作用域</span>
+<span class="token comment" spellcheck="true">// let 声明的变量  有局部作用域</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token keyword">let</span> b <span class="token operator">=</span> <span class="token number">1</span>
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">// 0</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">// ReferenceError: b is not defined</span></code></pre>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// var 可以声明多次</span>
+<span class="token comment" spellcheck="true">// let 只能声明一次</span>
+<span class="token keyword">var</span> m <span class="token operator">=</span> <span class="token number">1</span>
+<span class="token keyword">var</span> m <span class="token operator">=</span> <span class="token number">2</span>
+<span class="token keyword">let</span> n <span class="token operator">=</span> <span class="token number">3</span>
+<span class="token keyword">let</span> n <span class="token operator">=</span> <span class="token number">4</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>m<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">// 2</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">// Identifier 'n' has already been declared</span></code></pre>
+<p>2、const声明常量（只读变量）<br>创建 const.html</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// 1、声明之后不允许改变    </span>
+<span class="token keyword">const</span> PI <span class="token operator">=</span> <span class="token string">"3.1415926"</span>
+PI <span class="token operator">=</span> <span class="token number">3</span>  <span class="token comment" spellcheck="true">// TypeError: Assignment to constant variable.</span>
+<span class="token comment" spellcheck="true">// 2、一但声明必须初始化，否则会报错</span>
+<span class="token keyword">const</span> MY_AGE  <span class="token comment" spellcheck="true">// SyntaxError: Missing initializer in const declaration</span></code></pre>
+<p>3、解构赋值<br>创建 解构赋值.html<br>解构赋值是对赋值运算符的扩展。</p>
+<p>他是一种针对数组或者对象进行模式匹配，然后对其中的变量进行赋值。</p>
+<p>在代码书写上简洁且易读，语义更加清晰明了；也方便了复杂对象中数据字段获取。</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//1、数组解构</span>
+<span class="token comment" spellcheck="true">// 传统</span>
+<span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span> b <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">,</span> c <span class="token operator">=</span> <span class="token number">3</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">// ES6</span>
+<span class="token keyword">let</span> <span class="token punctuation">[</span>x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> z<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> z<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">//2、对象解构</span>
+<span class="token keyword">let</span> user <span class="token operator">=</span> <span class="token punctuation">{</span>name<span class="token punctuation">:</span> <span class="token string">'Helen'</span><span class="token punctuation">,</span> age<span class="token punctuation">:</span> <span class="token number">18</span><span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">// 传统</span>
+<span class="token keyword">let</span> name1 <span class="token operator">=</span> user<span class="token punctuation">.</span>name
+<span class="token keyword">let</span> age1 <span class="token operator">=</span> user<span class="token punctuation">.</span>age
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>name1<span class="token punctuation">,</span> age1<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">// ES6</span>
+<span class="token keyword">let</span> <span class="token punctuation">{</span> name<span class="token punctuation">,</span> age <span class="token punctuation">}</span> <span class="token operator">=</span>  user<span class="token comment" spellcheck="true">//注意：结构的变量必须是user中的属性</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span> age<span class="token punctuation">)</span></code></pre>
+<p>4、模板字符串<br>创建 模板字符串.html<br>模板字符串相当于加强版的字符串，用反引号 `,除了作为普通字符串，还可以用来定义多行字符串，还可以在字符串中加入变量和表达式。</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// 1、多行字符串</span>
+<span class="token keyword">let</span> string1 <span class="token operator">=</span>  <span class="token template-string"><span class="token string">`Hey,
+can you stop angry now?`</span></span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>string1<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">// Hey,</span>
+<span class="token comment" spellcheck="true">// can you stop angry now?</span></code></pre>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// 2、字符串插入变量和表达式。变量名写在 ${} 中，${} 中可以放入 JavaScript 表达式。</span>
+<span class="token keyword">let</span> name <span class="token operator">=</span> <span class="token string">"Mike"</span>
+<span class="token keyword">let</span> age <span class="token operator">=</span> <span class="token number">27</span>
+<span class="token keyword">let</span> info <span class="token operator">=</span> <span class="token template-string"><span class="token string">`My Name is </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">,I am </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>age<span class="token operator">+</span><span class="token number">1</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> years old next year.`</span></span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>info<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">// My Name is Mike,I am 28 years old next year.</span></code></pre>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// 3、字符串中调用函数</span>
+<span class="token keyword">function</span> <span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">"have fun!"</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">let</span> string2 <span class="token operator">=</span> <span class="token template-string"><span class="token string">`Game start,</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>string2<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// Game start,have fun!</span></code></pre>
+<p>5、声明对象简写<br>创建 声明对象简写.html</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">const</span> age <span class="token operator">=</span> <span class="token number">12</span>
+<span class="token keyword">const</span> name <span class="token operator">=</span> <span class="token string">"Amy"</span>
+<span class="token comment" spellcheck="true">// 传统</span>
+<span class="token keyword">const</span> person1 <span class="token operator">=</span> <span class="token punctuation">{</span>age<span class="token punctuation">:</span> age<span class="token punctuation">,</span> name<span class="token punctuation">:</span> name<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>person1<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">// ES6</span>
+<span class="token keyword">const</span> person2 <span class="token operator">=</span> <span class="token punctuation">{</span>age<span class="token punctuation">,</span> name<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>person2<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//{age: 12, name: "Amy"}</span></code></pre>
+<p>6、定义方法简写<br>创建 定义方法简写.html</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// 传统</span>
+<span class="token keyword">const</span> person1 <span class="token operator">=</span> <span class="token punctuation">{</span>
+    sayHi<span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Hi"</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+person1<span class="token punctuation">.</span><span class="token function">sayHi</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//"Hi"</span>
+<span class="token comment" spellcheck="true">// ES6</span>
+<span class="token keyword">const</span> person2 <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token function">sayHi</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Hi"</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+person2<span class="token punctuation">.</span><span class="token function">sayHi</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">//"Hi"</span></code></pre>
+<p>7、对象拓展运算符<br>创建 对象拓展运算符.html<br>拓展运算符（…）用于取出参数对象所有可遍历属性然后拷贝到当前对象。</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// 1、拷贝对象</span>
+<span class="token keyword">let</span> person1 <span class="token operator">=</span> <span class="token punctuation">{</span>name<span class="token punctuation">:</span> <span class="token string">"Amy"</span><span class="token punctuation">,</span> age<span class="token punctuation">:</span> <span class="token number">15</span><span class="token punctuation">}</span>
+<span class="token keyword">let</span> someone <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token operator">...</span>person1 <span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>someone<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">//{name: "Amy", age: 15}</span></code></pre>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// 2、合并对象</span>
+<span class="token keyword">let</span> age <span class="token operator">=</span> <span class="token punctuation">{</span>age<span class="token punctuation">:</span> <span class="token number">15</span><span class="token punctuation">}</span>
+<span class="token keyword">let</span> name <span class="token operator">=</span> <span class="token punctuation">{</span>name<span class="token punctuation">:</span> <span class="token string">"Amy"</span><span class="token punctuation">}</span>
+<span class="token keyword">let</span> person2 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token operator">...</span>age<span class="token punctuation">,</span> <span class="token operator">...</span>name<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>person2<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">//{age: 15, name: "Amy"}</span></code></pre>
+<p>8、箭头函数<br>创建 箭头函数.html<br>箭头函数提供了一种更加简洁的函数书写方式。基本语法是：<br>参数 =&gt; 函数体</p>
+<pre class=" language-javascript"><code class="language-javascript">
+<span class="token comment" spellcheck="true">// 传统</span>
+<span class="token keyword">var</span> f1 <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> a
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">f1</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">// ES6</span>
+<span class="token keyword">var</span> f2 <span class="token operator">=</span> a <span class="token operator">=</span><span class="token operator">></span> a
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">f2</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// 当箭头函数没有参数或者有多个参数，要用 () 括起来。</span>
+<span class="token comment" spellcheck="true">// 当箭头函数函数体有多行语句，用 {} 包裹起来，表示代码块，</span>
+<span class="token comment" spellcheck="true">// 当只有一行语句，并且需要返回结果时，可以省略 {} , 结果会自动返回。</span>
+<span class="token keyword">var</span> f3 <span class="token operator">=</span> <span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> result <span class="token operator">=</span> a<span class="token operator">+</span>b
+    <span class="token keyword">return</span> result
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">f3</span><span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">// 8</span>
+<span class="token comment" spellcheck="true">// 前面代码相当于：</span>
+<span class="token keyword">var</span> f4 <span class="token operator">=</span> <span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> a<span class="token operator">+</span>b</code></pre>
+<h2 id="Vue-js"><a href="#Vue-js" class="headerlink" title="Vue.js"></a>Vue.js</h2><h3 id="一、介绍"><a href="#一、介绍" class="headerlink" title="一、介绍"></a>一、介绍</h3><p>1、Vue.js 是什么<br>Vue (读音 /vjuː/，类似于 view) 是一套用于构建用户界面的渐进式框架。<br>Vue 的核心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。另一方面，当与现代化的工具链以及各种支持类库结合使用时，Vue 也完全能够为复杂的单页应用提供驱动。</p>
+<p>官方网站：<a href="https://cn.vuejs.org" target="_blank" rel="noopener">https://cn.vuejs.org</a></p>
+<p>2、初始Vue.js<br>创建 demo.html</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>body<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> id标识vue作用的范围 <span class="token operator">--</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"app"</span><span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 两个大括号嵌套 插值表达式，绑定vue中的data数据 <span class="token operator">--</span><span class="token operator">></span>
+    <span class="token punctuation">{</span><span class="token punctuation">{</span> message <span class="token punctuation">}</span><span class="token punctuation">}</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"vue.min.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+    <span class="token operator">&lt;</span>script<span class="token operator">></span>
+    <span class="token comment" spellcheck="true">// 创建一个vue对象</span>
+        <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            el<span class="token punctuation">:</span> <span class="token string">'#app'</span><span class="token punctuation">,</span><span class="token comment" spellcheck="true">//绑定vue作用的范围</span>
+            data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+                <span class="token comment" spellcheck="true">//定义页面中显示的模型数据</span>
+            message<span class="token punctuation">:</span> <span class="token string">'Hello Vue!'</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">></span></code></pre>
+<p>这就是声明式渲染：Vue.js 的核心是一个允许采用简洁的模板语法来声明式地将数据渲染进 DOM 的系统<br>这里的核心思想就是没有繁琐的DOM操作，例如jQuery中，我们需要先找到div节点，获取到DOM对象，然后进行一系列的节点操作</p>
+<p>在vs code中创建代码片段：<br>文件 =&gt;  首选项 =&gt; 用户代码片段 =&gt; 新建全局代码片段/或文件夹代码片段：vue-html.code-snippets<br>注意：制作代码片段的时候，字符串中如果包含文件中复制过来的“Tab”键的空格，要换成“空格键”的空格</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token punctuation">{</span>
+    <span class="token string">"vue htm"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">"scope"</span><span class="token punctuation">:</span> <span class="token string">"html"</span><span class="token punctuation">,</span>
+        <span class="token string">"prefix"</span><span class="token punctuation">:</span> <span class="token string">"vuehtml"</span><span class="token punctuation">,</span>
+        <span class="token string">"body"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+            <span class="token string">"&lt;!DOCTYPE html>"</span><span class="token punctuation">,</span>
+            <span class="token string">"&lt;html lang=\"en\">"</span><span class="token punctuation">,</span>
+            <span class="token string">""</span><span class="token punctuation">,</span>
+            <span class="token string">"&lt;head>"</span><span class="token punctuation">,</span>
+            <span class="token string">"    &lt;meta charset=\"UTF-8\">"</span><span class="token punctuation">,</span>
+            <span class="token string">"    &lt;meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">"</span><span class="token punctuation">,</span>
+            <span class="token string">"    &lt;meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">"</span><span class="token punctuation">,</span>
+            <span class="token string">"    &lt;title>Document&lt;/title>"</span><span class="token punctuation">,</span>
+            <span class="token string">"&lt;/head>"</span><span class="token punctuation">,</span>
+            <span class="token string">""</span><span class="token punctuation">,</span>
+            <span class="token string">"&lt;body>"</span><span class="token punctuation">,</span>
+            <span class="token string">"    &lt;div id=\"app\">"</span><span class="token punctuation">,</span>
+            <span class="token string">""</span><span class="token punctuation">,</span>
+            <span class="token string">"    &lt;/div>"</span><span class="token punctuation">,</span>
+            <span class="token string">"    &lt;script src=\"vue.min.js\">&lt;/script>"</span><span class="token punctuation">,</span>
+            <span class="token string">"    &lt;script>"</span><span class="token punctuation">,</span>
+            <span class="token string">"        new Vue({"</span><span class="token punctuation">,</span>
+            <span class="token string">"            el: '#app',"</span><span class="token punctuation">,</span>
+            <span class="token string">"            data: {"</span><span class="token punctuation">,</span>
+            <span class="token string">"                $1"</span><span class="token punctuation">,</span>
+            <span class="token string">"            }"</span><span class="token punctuation">,</span>
+            <span class="token string">"        })"</span><span class="token punctuation">,</span>
+            <span class="token string">"    &lt;/script>"</span><span class="token punctuation">,</span>
+            <span class="token string">"&lt;/body>"</span><span class="token punctuation">,</span>
+            <span class="token string">""</span><span class="token punctuation">,</span>
+            <span class="token string">"&lt;/html>"</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token string">"description"</span><span class="token punctuation">:</span> <span class="token string">"my vue template in html"</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span></code></pre>
+<h3 id="二、基本语法-1"><a href="#二、基本语法-1" class="headerlink" title="二、基本语法"></a>二、基本语法</h3><p>1、基本数据渲染和指令<br>创建 01-基本数据渲染和指令.html<br>你看到的 v-bind 特性被称为指令。指令带有前缀 v-<br>除了使用插值表达式进行数据渲染，也可以使用 v-bind指令，它的简写的形式就是一个冒号（:）</p>
+<pre class=" language-javascript"><code class="language-javascript">data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    content<span class="token punctuation">:</span> <span class="token string">'我是标题'</span><span class="token punctuation">,</span>
+    message<span class="token punctuation">:</span> <span class="token string">'页面加载于 '</span> <span class="token operator">+</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 如果要将模型数据绑定在html属性中，则使用 v<span class="token operator">-</span>bind 指令
+     此时title中显示的是模型数据
+<span class="token operator">--</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>h1 v<span class="token operator">-</span>bind<span class="token punctuation">:</span>title<span class="token operator">=</span><span class="token string">"message"</span><span class="token operator">></span>
+    <span class="token punctuation">{</span><span class="token punctuation">{</span>content<span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> v<span class="token operator">-</span>bind 指令的简写形式： 冒号（<span class="token punctuation">:</span>） <span class="token operator">--</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>h1 <span class="token punctuation">:</span>title<span class="token operator">=</span><span class="token string">"message"</span><span class="token operator">></span>
+    <span class="token punctuation">{</span><span class="token punctuation">{</span>content<span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span></code></pre>
+<p>2、双向数据绑定<br>创建 02-双向数据绑定.html<br>双向数据绑定和单向数据绑定：使用 v-model 进行双向数据绑定</p>
+<pre class=" language-javascript"><code class="language-javascript">data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    searchMap<span class="token punctuation">:</span><span class="token punctuation">{</span>
+        keyWord<span class="token punctuation">:</span> <span class="token string">'hhh'</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token number">1</span>
+<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> v<span class="token operator">-</span>bind<span class="token punctuation">:</span>value只能进行单向的数据渲染 <span class="token operator">--</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> v<span class="token operator">-</span>bind<span class="token punctuation">:</span>value<span class="token operator">=</span><span class="token string">"searchMap.keyWord"</span><span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> v<span class="token operator">-</span>model 可以进行双向的数据绑定  <span class="token operator">--</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> v<span class="token operator">-</span>model<span class="token operator">=</span><span class="token string">"searchMap.keyWord"</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>p<span class="token operator">></span>您要查询的是：<span class="token punctuation">{</span><span class="token punctuation">{</span>searchMap<span class="token punctuation">.</span>keyWord<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span></code></pre>
+<p>3、事件<br>创建 03-事件.html<br>需求：点击查询按钮，按照输入框中输入的内容查找公司相关信息<br>在前面的例子基础上，data节点中增加 result，增加 methods节点 并定义 search方法</p>
+<pre class=" language-javascript"><code class="language-javascript">data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+     searchMap<span class="token punctuation">:</span><span class="token punctuation">{</span>
+         keyWord<span class="token punctuation">:</span> <span class="token string">'尚硅谷'</span>
+     <span class="token punctuation">}</span><span class="token punctuation">,</span>
+     <span class="token comment" spellcheck="true">//查询结果</span>
+     result<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+methods<span class="token punctuation">:</span><span class="token punctuation">{</span>
+    <span class="token function">search</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'search'</span><span class="token punctuation">)</span>
+        <span class="token comment" spellcheck="true">//TODO</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>html中增加 button 和 p<br>使用 v-on 进行数件处理，v-on:click 表示处理鼠标点击事件，事件调用的方法定义在 vue 对象声明的 methods 节点中</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> v<span class="token operator">-</span>on 指令绑定事件，click指定绑定的事件类型，事件发生时调用vue中methods节点中定义的方法 <span class="token operator">--</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>button v<span class="token operator">-</span>on<span class="token punctuation">:</span>click<span class="token operator">=</span><span class="token string">"search()"</span><span class="token operator">></span>查询<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
+<span class="token number">4</span>
+<span class="token operator">&lt;</span>p<span class="token operator">></span>您要查询的是：<span class="token punctuation">{</span><span class="token punctuation">{</span>searchMap<span class="token punctuation">.</span>keyWord<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
+<span class="token operator">&lt;</span>p<span class="token operator">></span><span class="token operator">&lt;</span>a v<span class="token operator">-</span>bind<span class="token punctuation">:</span>href<span class="token operator">=</span><span class="token string">"result.site"</span> target<span class="token operator">=</span><span class="token string">"_blank"</span><span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span>result<span class="token punctuation">.</span>title<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span></code></pre>
+<p>完善search方法</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token function">search</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'search'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>result <span class="token operator">=</span> <span class="token punctuation">{</span>
+        <span class="token string">"title"</span><span class="token punctuation">:</span><span class="token string">"尚硅谷"</span><span class="token punctuation">,</span>
+        <span class="token string">"site"</span><span class="token punctuation">:</span><span class="token string">"http://www.atguigu.com"</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>简写</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> v<span class="token operator">-</span>on 指令的简写形式 @ <span class="token operator">--</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>button @click<span class="token operator">=</span><span class="token string">"search()"</span><span class="token operator">></span>查询<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span></code></pre>
+<p>4、修饰符<br>创建 04-修饰符.html<br>修饰符 (Modifiers) 是以半角句号（.）指明的特殊后缀，用于指出一个指令应该以特殊方式绑定。<br>例如，.prevent 修饰符告诉 v-on 指令对于触发的事件调用 event.preventDefault()：<br>即阻止事件原本的默认行为</p>
+<pre class=" language-javascript"><code class="language-javascript">data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    user<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 修饰符用于指出一个指令应该以特殊方式绑定。
+     这里的 <span class="token punctuation">.</span>prevent 修饰符告诉 v<span class="token operator">-</span>on 指令对于触发的事件调用js的 event<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span>：
+     即阻止表单提交的默认行为 <span class="token operator">--</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>form action<span class="token operator">=</span><span class="token string">"save"</span> v<span class="token operator">-</span>on<span class="token punctuation">:</span>submit<span class="token punctuation">.</span>prevent<span class="token operator">=</span><span class="token string">"onSubmit"</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>label <span class="token keyword">for</span><span class="token operator">=</span><span class="token string">"username"</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> id<span class="token operator">=</span><span class="token string">"username"</span> v<span class="token operator">-</span>model<span class="token operator">=</span><span class="token string">"user.username"</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>button type<span class="token operator">=</span><span class="token string">"submit"</span><span class="token operator">></span>保存<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>label<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>form<span class="token operator">></span></code></pre>
+<pre class=" language-javascript"><code class="language-javascript">methods<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token function">onSubmit</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>user<span class="token punctuation">.</span>username<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'提交表单'</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'请输入用户名'</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>5、条件渲染<br>创建 05-条件渲染.html<br>v-if：条件指令</p>
+<pre class=" language-javascript"><code class="language-javascript">data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    ok<span class="token punctuation">:</span> <span class="token boolean">false</span>
+<span class="token punctuation">}</span></code></pre>
+<p>注意：单个复选框绑定到布尔值</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"checkbox"</span> v<span class="token operator">-</span>model<span class="token operator">=</span><span class="token string">"ok"</span><span class="token operator">></span>同意许可协议
+<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> v<span class="token punctuation">:</span><span class="token keyword">if</span>条件指令：还有v<span class="token operator">-</span><span class="token keyword">else</span>、v<span class="token operator">-</span><span class="token keyword">else</span><span class="token operator">-</span><span class="token keyword">if</span> 切换开销大 <span class="token operator">--</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>h1 v<span class="token operator">-</span><span class="token keyword">if</span><span class="token operator">=</span><span class="token string">"ok"</span><span class="token operator">></span><span class="token keyword">if</span>：Lorem ipsum dolor sit amet<span class="token punctuation">.</span><span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span>
+<span class="token operator">&lt;</span>h1 v<span class="token operator">-</span><span class="token keyword">else</span><span class="token operator">></span>no<span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span></code></pre>
+<p>v-show：条件指令<br>使用v-show完成和上面相同的功能</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> v<span class="token punctuation">:</span>show 条件指令 初始渲染开销大 <span class="token operator">--</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>h1 v<span class="token operator">-</span>show<span class="token operator">=</span><span class="token string">"ok"</span><span class="token operator">></span>show：Lorem ipsum dolor sit amet<span class="token punctuation">.</span><span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span>
+<span class="token operator">&lt;</span>h1 v<span class="token operator">-</span>show<span class="token operator">=</span><span class="token string">"!ok"</span><span class="token operator">></span>no<span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span></code></pre>
+<p>v-if 是“真正”的条件渲染，因为它会确保在切换过程中条件块内的事件监听器和子组件适当地被销毁和重建。<br>v-if 也是惰性的：如果在初始渲染时条件为假，则什么也不做——直到条件第一次变为真时，才会开始渲染条件块。<br>相比之下，v-show 就简单得多——不管初始条件是什么，元素总是会被渲染，并且只是简单地基于 CSS 进行切换。<br>一般来说，v-if 有更高的切换开销，而 v-show 有更高的初始渲染开销。因此，如果需要非常频繁地切换，则使用 v-show 较好；如果在运行时条件很少改变，则使用 v-if 较好。</p>
+<p>6、列表渲染<br>创建 06-列表渲染.html<br>v-for：列表循环指令<br>例1：简单的列表渲染</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> <span class="token number">1</span>、简单的列表渲染 <span class="token operator">--</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>ul<span class="token operator">></span>
+    <span class="token operator">&lt;</span>li v<span class="token operator">-</span><span class="token keyword">for</span><span class="token operator">=</span><span class="token string">"n in 10"</span><span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span> n <span class="token punctuation">}</span><span class="token punctuation">}</span> <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">></span>
+<span class="token operator">&lt;</span>ul<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 如果想获取索引，则使用index关键字，注意，圆括号中的index必须放在后面 <span class="token operator">--</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>li v<span class="token operator">-</span><span class="token keyword">for</span><span class="token operator">=</span><span class="token string">"(n, index) in 5"</span><span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span> n <span class="token punctuation">}</span><span class="token punctuation">}</span> <span class="token operator">-</span> <span class="token punctuation">{</span><span class="token punctuation">{</span> index <span class="token punctuation">}</span><span class="token punctuation">}</span> <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">></span></code></pre>
+<p>例2：遍历数据列表</p>
+<pre class=" language-javascript"><code class="language-javascript">data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    userList<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span> id<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> username<span class="token punctuation">:</span> <span class="token string">'helen'</span><span class="token punctuation">,</span> age<span class="token punctuation">:</span> <span class="token number">18</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span> id<span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span> username<span class="token punctuation">:</span> <span class="token string">'peter'</span><span class="token punctuation">,</span> age<span class="token punctuation">:</span> <span class="token number">28</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span> id<span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">,</span> username<span class="token punctuation">:</span> <span class="token string">'andy'</span><span class="token punctuation">,</span> age<span class="token punctuation">:</span> <span class="token number">38</span> <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span></code></pre>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> <span class="token number">2</span>、遍历数据列表 <span class="token operator">--</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>table border<span class="token operator">=</span><span class="token string">"1"</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> <span class="token operator">&lt;</span>tr v<span class="token operator">-</span><span class="token keyword">for</span><span class="token operator">=</span><span class="token string">"item in userList"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>tr<span class="token operator">></span> <span class="token operator">--</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>tr v<span class="token operator">-</span><span class="token keyword">for</span><span class="token operator">=</span><span class="token string">"(item, index) in userList"</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>td<span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span>index<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>td<span class="token operator">></span>
+        <span class="token operator">&lt;</span>td<span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span>item<span class="token punctuation">.</span>id<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>td<span class="token operator">></span>
+        <span class="token operator">&lt;</span>td<span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span>item<span class="token punctuation">.</span>username<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>td<span class="token operator">></span>
+        <span class="token operator">&lt;</span>td<span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span>item<span class="token punctuation">.</span>age<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>td<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>tr<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>table<span class="token operator">></span></code></pre>
+<h2 id="Vue-js进阶"><a href="#Vue-js进阶" class="headerlink" title="Vue.js进阶"></a>Vue.js进阶</h2><h3 id="一、组件（重点）"><a href="#一、组件（重点）" class="headerlink" title="一、组件（重点）"></a>一、组件（重点）</h3><p>组件（Component）是 Vue.js 最强大的功能之一。<br>组件可以扩展 HTML 元素，封装可重用的代码。</p>
+<p>组件系统让我们可以用独立可复用的小组件来构建大型应用，几乎任意类型的应用的界面都可以抽象为一个组件树：<br>1、局部组件<br>创建 01-1-局部组件.html<br>定义组件</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    el<span class="token punctuation">:</span> <span class="token string">'#app'</span><span class="token punctuation">,</span>
+    <span class="token comment" spellcheck="true">// 定义局部组件，这里可以定义多个局部组件</span>
+    components<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//组件的名字</span>
+        <span class="token string">'Navbar'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">//组件的内容</span>
+            template<span class="token punctuation">:</span> <span class="token string">'&lt;ul>&lt;li>首页&lt;/li>&lt;li>学员管理&lt;/li>&lt;/ul>'</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
+<p>使用</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"app"</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>Navbar<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>Navbar<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span></code></pre>
+<p>2、全局组件<br>创建 01-2-全局组件.html<br>定义全局组件：components/Navbar.js</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// 定义全局组件</span>
+Vue<span class="token punctuation">.</span><span class="token function">component</span><span class="token punctuation">(</span><span class="token string">'Navbar'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    template<span class="token punctuation">:</span> <span class="token string">'&lt;ul>&lt;li>首页&lt;/li>&lt;li>学员管理&lt;/li>&lt;li>讲师管理&lt;/li>&lt;/ul>'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"app"</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>Navbar<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>Navbar<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+<span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"vue.min.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+<span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"components/Navbar.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+<span class="token operator">&lt;</span>script<span class="token operator">></span>
+    <span class="token keyword">var</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        el<span class="token punctuation">:</span> <span class="token string">'#app'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span></code></pre>
+<h3 id="二、实例生命周期"><a href="#二、实例生命周期" class="headerlink" title="二、实例生命周期"></a>二、实例生命周期</h3><p><img src="https://img-blog.csdnimg.cn/2020041420240477.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Jpa2Ew,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token function">beforeCreate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 第一个被执行的钩子方法：实例被创建出来之前执行</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>message<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//undefined</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//TypeError: this.show is not a function</span>
+    <span class="token comment" spellcheck="true">// beforeCreate执行时，data 和 methods 中的 数据都还没有没初始化</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token function">created</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 第二个被执行的钩子方法</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>message<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//床前明月光</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//执行show方法</span>
+    <span class="token comment" spellcheck="true">// created执行时，data 和 methods 都已经被初始化好了！</span>
+    <span class="token comment" spellcheck="true">// 如果要调用 methods 中的方法，或者操作 data 中的数据，最早，只能在 created 中操作</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token function">beforeMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 第三个被执行的钩子方法</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'h3'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>innerText<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//{{ message }}</span>
+    <span class="token comment" spellcheck="true">// beforeMount执行时，模板已经在内存中编辑完成了，尚未被渲染到页面中</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token function">mounted</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 第四个被执行的钩子方法</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'h3'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>innerText<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//床前明月光</span>
+    <span class="token comment" spellcheck="true">// 内存中的模板已经渲染到页面，用户已经可以看见内容</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+
+<span class="token comment" spellcheck="true">//===运行中的两个事件</span>
+<span class="token function">beforeUpdate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 数据更新的前一刻</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'界面显示的内容：'</span> <span class="token operator">+</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'h3'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>innerText<span class="token punctuation">)</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'data 中的 message 数据是：'</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>message<span class="token punctuation">)</span>
+    <span class="token comment" spellcheck="true">// beforeUpdate执行时，内存中的数据已更新，但是页面尚未被渲染</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token function">updated</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'界面显示的内容：'</span> <span class="token operator">+</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'h3'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>innerText<span class="token punctuation">)</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'data 中的 message 数据是：'</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>message<span class="token punctuation">)</span>
+    <span class="token comment" spellcheck="true">// updated执行时，内存中的数据已更新，并且页面已经被渲染</span>
+<span class="token punctuation">}</span></code></pre>
+<h3 id="四、路由"><a href="#四、路由" class="headerlink" title="四、路由"></a>四、路由</h3><p>Vue.js 路由允许我们通过不同的 URL 访问不同的内容。<br>通过 Vue.js 可以实现多视图的单页Web应用（single page web application，SPA）。</p>
+<p>Vue.js 路由需要载入 vue-router 库</p>
+<p>创建 04-路由.html</p>
+<p>1、引入js</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"vue.min.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+<span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"vue-router.min.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span></code></pre>
+<p>2、编写html</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"app"</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>h1<span class="token operator">></span>Hello App<span class="token operator">!</span><span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span>
+    <span class="token operator">&lt;</span>p<span class="token operator">></span>
+        <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 使用 router<span class="token operator">-</span>link 组件来导航<span class="token punctuation">.</span> <span class="token operator">--</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 通过传入 <span class="token template-string"><span class="token string">`to`</span></span> 属性指定链接<span class="token punctuation">.</span> <span class="token operator">--</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> <span class="token operator">&lt;</span>router<span class="token operator">-</span>link<span class="token operator">></span> 默认会被渲染成一个 <span class="token template-string"><span class="token string">`&lt;a>`</span></span> 标签 <span class="token operator">--</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>router<span class="token operator">-</span>link to<span class="token operator">=</span><span class="token string">"/"</span><span class="token operator">></span>首页<span class="token operator">&lt;</span><span class="token operator">/</span>router<span class="token operator">-</span>link<span class="token operator">></span>
+        <span class="token operator">&lt;</span>router<span class="token operator">-</span>link to<span class="token operator">=</span><span class="token string">"/student"</span><span class="token operator">></span>会员管理<span class="token operator">&lt;</span><span class="token operator">/</span>router<span class="token operator">-</span>link<span class="token operator">></span>
+        <span class="token operator">&lt;</span>router<span class="token operator">-</span>link to<span class="token operator">=</span><span class="token string">"/teacher"</span><span class="token operator">></span>讲师管理<span class="token operator">&lt;</span><span class="token operator">/</span>router<span class="token operator">-</span>link<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 路由出口 <span class="token operator">--</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 路由匹配到的组件将渲染在这里 <span class="token operator">--</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>router<span class="token operator">-</span>view<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>router<span class="token operator">-</span>view<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span></code></pre>
+<p>3、编写js</p>
+<pre class=" language-javascript"><code class="language-javascript">    <span class="token comment" spellcheck="true">// 1. 定义（路由）组件。</span>
+    <span class="token comment" spellcheck="true">// 可以从其他文件 import 进来</span>
+    <span class="token keyword">const</span> Welcome <span class="token operator">=</span> <span class="token punctuation">{</span> template<span class="token punctuation">:</span> <span class="token string">'&amp;lt;div&amp;gt;欢迎&amp;lt;/div&amp;gt;'</span> <span class="token punctuation">}</span>
+    <span class="token keyword">const</span> Student <span class="token operator">=</span> <span class="token punctuation">{</span> template<span class="token punctuation">:</span> <span class="token string">'&amp;lt;div&amp;gt;student list&amp;lt;/div&amp;gt;'</span> <span class="token punctuation">}</span>
+    <span class="token keyword">const</span> Teacher <span class="token operator">=</span> <span class="token punctuation">{</span> template<span class="token punctuation">:</span> <span class="token string">'&amp;lt;div&amp;gt;teacher list&amp;lt;/div&amp;gt;'</span> <span class="token punctuation">}</span>
+
+    <span class="token comment" spellcheck="true">// 2. 定义路由</span>
+    <span class="token comment" spellcheck="true">// 每个路由应该映射一个组件。</span>
+    <span class="token keyword">const</span> routes <span class="token operator">=</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span> path<span class="token punctuation">:</span> <span class="token string">'/'</span><span class="token punctuation">,</span> redirect<span class="token punctuation">:</span> <span class="token string">'/welcome'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">//设置默认指向的路径</span>
+        <span class="token punctuation">{</span> path<span class="token punctuation">:</span> <span class="token string">'/welcome'</span><span class="token punctuation">,</span> component<span class="token punctuation">:</span> Welcome <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span> path<span class="token punctuation">:</span> <span class="token string">'/student'</span><span class="token punctuation">,</span> component<span class="token punctuation">:</span> Student <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span> path<span class="token punctuation">:</span> <span class="token string">'/teacher'</span><span class="token punctuation">,</span> component<span class="token punctuation">:</span> Teacher <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+
+    <span class="token comment" spellcheck="true">// 3. 创建 router 实例，然后传 `routes` 配置</span>
+    <span class="token keyword">const</span> router <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">VueRouter</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        routes <span class="token comment" spellcheck="true">// （缩写）相当于 routes: routes</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+    <span class="token comment" spellcheck="true">// 4. 创建和挂载根实例。</span>
+    <span class="token comment" spellcheck="true">// 从而让整个应用都有路由功能</span>
+    <span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        el<span class="token punctuation">:</span> <span class="token string">'#app'</span><span class="token punctuation">,</span>
+        router
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+    <span class="token comment" spellcheck="true">// 现在，应用已经启动了！</span></code></pre>
+<h3 id="五、axios"><a href="#五、axios" class="headerlink" title="五、axios"></a>五、axios</h3><p>axios是独立于vue的一个项目，基于promise用于浏览器和node.js的http客户端<br>在浏览器中可以帮助我们完成 ajax请求的发送<br>在node.js中可以向远程接口发送请求<br>获取数据</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"vue.min.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+<span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"axios.min.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span></code></pre>
+<p>注意：测试时需要开启后端服务器，并且后端开启跨域访问权限</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"app"</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>div v<span class="token operator">-</span><span class="token keyword">for</span><span class="token operator">=</span><span class="token string">"user in userList"</span><span class="token operator">></span>
+            <span class="token punctuation">{</span><span class="token punctuation">{</span>user<span class="token punctuation">.</span>name<span class="token punctuation">}</span><span class="token punctuation">}</span> <span class="token operator">--</span><span class="token operator">-</span> <span class="token punctuation">{</span><span class="token punctuation">{</span>user<span class="token punctuation">.</span>age<span class="token punctuation">}</span><span class="token punctuation">}</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"vue.min.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+    <span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"axios.min.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+    <span class="token operator">&lt;</span>script<span class="token operator">></span>
+        <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            el<span class="token punctuation">:</span> <span class="token string">'#app'</span><span class="token punctuation">,</span>
+            data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+                <span class="token comment" spellcheck="true">//定义变量</span>
+                userList<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token function">created</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">//页面渲染之前执行</span>
+                <span class="token comment" spellcheck="true">//调用定义的方法</span>
+                <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getUserList</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            methods<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+                <span class="token comment" spellcheck="true">//创建方法</span>
+                <span class="token function">getUserList</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token comment" spellcheck="true">//使用axios发生ajax请求</span>
+                    <span class="token comment" spellcheck="true">//axios.提交方式（“请求接口路径”）</span>
+                    axios<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">"data.json"</span><span class="token punctuation">)</span>
+                        <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>response <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+                            <span class="token comment" spellcheck="true">//通过response获取具体数据，赋值给定义空数组</span>
+                            <span class="token keyword">this</span><span class="token punctuation">.</span>userList <span class="token operator">=</span> response<span class="token punctuation">.</span>data<span class="token punctuation">.</span>data<span class="token punctuation">.</span>items
+                            console<span class="token punctuation">.</span><span class="token function">dir</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>userList<span class="token punctuation">)</span>
+                                <span class="token comment" spellcheck="true">// console.dir(response)</span>
+
+                        <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//请求成功执行then方法</span>
+                        <span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span>error <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//失败执行它</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span></code></pre>
+<p>控制台查看输出<br>2、显示数据</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token punctuation">{</span>
+    <span class="token string">"success"</span><span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token string">"code"</span><span class="token punctuation">:</span> <span class="token number">20000</span><span class="token punctuation">,</span>
+    <span class="token string">"message"</span><span class="token punctuation">:</span> <span class="token string">"成功"</span><span class="token punctuation">,</span>
+    <span class="token string">"data"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">"items"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span> <span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"lucy"</span><span class="token punctuation">,</span> <span class="token string">"age"</span><span class="token punctuation">:</span> <span class="token number">20</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span> <span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"mary"</span><span class="token punctuation">,</span> <span class="token string">"age"</span><span class="token punctuation">:</span> <span class="token number">30</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span> <span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"jack"</span><span class="token punctuation">,</span> <span class="token string">"age"</span><span class="token punctuation">:</span> <span class="token number">40</span> <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<h3 id="六、element-ui："><a href="#六、element-ui：" class="headerlink" title="六、element-ui："></a>六、element-ui：</h3><p>element-ui 是饿了么前端出品的基于 Vue.js的 后台组件库，方便程序员进行页面快速布局和构建<br>官网： <a href="http://element-cn.eleme.io/#/zh-CN" target="_blank" rel="noopener">http://element-cn.eleme.io/#/zh-CN</a><br>创建 06-element-ui.html<br>将element-ui引入到项目<br>1、引入css</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> <span class="token keyword">import</span> CSS <span class="token operator">--</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>link rel<span class="token operator">=</span><span class="token string">"stylesheet"</span> href<span class="token operator">=</span><span class="token string">"element-ui/lib/theme-chalk/index.css"</span><span class="token operator">></span></code></pre>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> <span class="token keyword">import</span> Vue before Element <span class="token operator">--</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"vue.min.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> <span class="token keyword">import</span> JavaScript <span class="token operator">--</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"element-ui/lib/index.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span></code></pre>
+<p>3、编写html</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"app"</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>el<span class="token operator">-</span>button @click<span class="token operator">=</span><span class="token string">"visible = true"</span><span class="token operator">></span>Button<span class="token operator">&lt;</span><span class="token operator">/</span>el<span class="token operator">-</span>button<span class="token operator">></span>
+    <span class="token operator">&lt;</span>el<span class="token operator">-</span>dialog <span class="token punctuation">:</span>visible<span class="token punctuation">.</span>sync<span class="token operator">=</span><span class="token string">"visible"</span> title<span class="token operator">=</span><span class="token string">"Hello world"</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>p<span class="token operator">></span>Try Element<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>el<span class="token operator">-</span>dialog<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span></code></pre>
+<p>关于.sync的扩展阅读<br><a href="https://www.jianshu.com/p/d42c508ea9de" target="_blank" rel="noopener">https://www.jianshu.com/p/d42c508ea9de</a></p>
+<p>4、编写js</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script<span class="token operator">></span>
+    <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      el<span class="token punctuation">:</span> <span class="token string">'#app'</span><span class="token punctuation">,</span>
+      data<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment" spellcheck="true">//定义Vue中data的另一种方式</span>
+        <span class="token keyword">return</span> <span class="token punctuation">{</span> visible<span class="token punctuation">:</span> <span class="token boolean">false</span> <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span></code></pre>
+<h2 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h2><h3 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a>一、简介</h3><p>1、什么是Node.js<br>简单的说 Node.js 就是运行在服务端的 JavaScript。<br>Node.js是一个事件驱动I/O服务端JavaScript环境，基于Google的V8引擎，V8引擎执行Javascript的速度非常快，性能非常好。</p>
+<p>2、Node.js有什么用<br>如果你是一个前端程序员，你不懂得像PHP、Python或Ruby等动态编程语言，然后你想创建自己的服务，那么Node.js是一个非常好的选择。<br>Node.js 是运行在服务端的 JavaScript，如果你熟悉Javascript，那么你将会很容易的学会Node.js。</p>
+<p>当然，如果你是后端程序员，想部署一些高性能的服务，那么学习Node.js也是一个非常好的选择。</p>
+<h3 id="二、安装"><a href="#二、安装" class="headerlink" title="二、安装"></a>二、安装</h3><p>1、下载<br>官网：<a href="https://nodejs.org/en/" target="_blank" rel="noopener">https://nodejs.org/en/</a></p>
+<p>中文网：<a href="http://nodejs.cn/" target="_blank" rel="noopener">http://nodejs.cn/</a></p>
+<p>LTS：长期支持版本</p>
+<p>Current：最新版</p>
+<p>2、安装</p>
+<p>3、查看版本</p>
+<pre class=" language-javascript"><code class="language-javascript">node <span class="token operator">-</span>v</code></pre>
+<h3 id="三、快速入门"><a href="#三、快速入门" class="headerlink" title="三、快速入门"></a>三、快速入门</h3><p>1、创建文件夹nodejs<br>2、控制台程序<br>创建 01-控制台程序.js</p>
+<pre class=" language-javascript"><code class="language-javascript">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Hello Node.js'</span><span class="token punctuation">)</span></code></pre>
+<p>打开命令行终端：Ctrl + Shift + y<br>进入到程序所在的目录，输入</p>
+<pre class=" language-javascript"><code class="language-javascript">node <span class="token number">01</span><span class="token operator">-</span>控制台程序<span class="token punctuation">.</span>js</code></pre>
+<p>浏览器的内核包括两部分核心：<br>DOM渲染引擎；<br>js解析器（js引擎）<br>js运行在浏览器中的内核中的js引擎内部<br>Node.js是脱离浏览器环境运行的JavaScript程序，基于V8 引擎（Chrome 的 JavaScript的引擎）<br>3、服务器端应用开发（了解）</p>
+<h2 id="NPM"><a href="#NPM" class="headerlink" title="NPM"></a>NPM</h2><h3 id="一、简介-1"><a href="#一、简介-1" class="headerlink" title="一、简介"></a>一、简介</h3><p>1、什么是NPM<br>NPM全称Node Package Manager，是Node.js包管理工具，是全球最大的模块生态系统，里面所有的模块都是开源免费的；也是Node.js的包管理工具，相当于前端的Maven 。</p>
+<p>2、NPM工具的安装位置<br>我们通过npm 可以很方便地下载js库，管理前端工程。</p>
+<p>Node.js默认安装的npm包和工具的位置：Node.js目录\node_modules</p>
+<p>在这个目录下你可以看见 npm目录，npm本身就是被NPM包管理器管理的一个工具，说明 Node.js已经集成了npm工具</p>
+<pre class=" language-javascript"><code class="language-javascript">#在命令提示符输入 npm <span class="token operator">-</span>v 可查看当前npm版本
+npm <span class="token operator">-</span>v</code></pre>
+<h3 id="二、使用npm管理项目"><a href="#二、使用npm管理项目" class="headerlink" title="二、使用npm管理项目"></a>二、使用npm管理项目</h3><p>1、创建文件夹npm<br>2、项目初始化</p>
+<pre class=" language-javascript"><code class="language-javascript">#建立一个空文件夹，在命令提示符进入该文件夹  执行命令初始化
+npm init
+#按照提示输入相关信息，如果是用默认值则直接回车即可。
+#name<span class="token punctuation">:</span> 项目名称
+#version<span class="token punctuation">:</span> 项目版本号
+#description<span class="token punctuation">:</span> 项目描述
+#keywords<span class="token punctuation">:</span> <span class="token punctuation">{</span>Array<span class="token punctuation">}</span>关键词，便于用户搜索到我们的项目
+#最后会生成<span class="token keyword">package</span><span class="token punctuation">.</span>json文件，这个是包的配置文件，相当于maven的pom<span class="token punctuation">.</span>xml
+#我们之后也可以根据需要进行修改。</code></pre>
+<pre class=" language-javascript"><code class="language-javascript">
+#如果想直接生成 <span class="token keyword">package</span><span class="token punctuation">.</span>json 文件，那么可以使用命令
+npm init <span class="token operator">-</span>y</code></pre>
+<p>2、修改npm镜像<br>NPM官方的管理的包都是从 <a href="http://npmjs.com下载的，但是这个网站在国内速度很慢。" target="_blank" rel="noopener">http://npmjs.com下载的，但是这个网站在国内速度很慢。</a><br>这里推荐使用淘宝 NPM 镜像 <a href="http://npm.taobao.org/" target="_blank" rel="noopener">http://npm.taobao.org/</a> ，淘宝 NPM 镜像是一个完整 npmjs.com 镜像，同步频率目前为 10分钟一次，以保证尽量与官方服务同步。<br>设置镜像地址：</p>
+<pre class=" language-javascript"><code class="language-javascript">#经过下面的配置，以后所有的 npm install 都会经过淘宝的镜像地址下载
+npm config <span class="token keyword">set</span> registry https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>registry<span class="token punctuation">.</span>npm<span class="token punctuation">.</span>taobao<span class="token punctuation">.</span>org 
+#查看npm配置信息
+npm config list</code></pre>
+<p>3、npm install命令的使用</p>
+<pre class=" language-javascript"><code class="language-javascript">#使用 npm install 安装依赖包的最新版，
+#模块安装的位置：项目目录\node_modules
+#安装会自动在项目目录下添加 <span class="token keyword">package</span><span class="token operator">-</span>lock<span class="token punctuation">.</span>json文件，这个文件帮助锁定安装包的版本
+#同时<span class="token keyword">package</span><span class="token punctuation">.</span>json 文件中，依赖包会被添加到dependencies节点下，类似maven中的 <span class="token operator">&amp;</span>lt<span class="token punctuation">;</span>dependencies<span class="token operator">&amp;</span>gt<span class="token punctuation">;</span>
+npm install jquery
+
+#npm管理的项目在备份和传输的时候一般不携带node_modules文件夹
+npm install #根据<span class="token keyword">package</span><span class="token punctuation">.</span>json中的配置下载依赖，初始化项目
+
+#如果安装时想指定特定的版本
+npm install jquery@<span class="token number">2.1</span><span class="token punctuation">.</span>x
+
+#devDependencies节点：开发时的依赖包，项目打包到生产环境的时候不包含的依赖
+#使用 <span class="token operator">-</span>D参数将依赖添加到devDependencies节点
+npm install <span class="token operator">--</span>save<span class="token operator">-</span>dev eslint
+#或
+npm install <span class="token operator">-</span>D eslint
+
+#全局安装
+#Node<span class="token punctuation">.</span>js全局安装的npm包和工具的位置：用户目录\AppData\Roaming\npm\node_modules
+#一些命令行工具常使用全局安装的方式
+npm install <span class="token operator">-</span>g webpack</code></pre>
+<p>4、其它命令</p>
+<pre class=" language-javascript"><code class="language-javascript">#更新包（更新到最新版本）
+npm update 包名
+#全局更新
+npm update <span class="token operator">-</span>g 包名
+
+#卸载包
+npm uninstall 包名
+#全局卸载
+npm uninstall <span class="token operator">-</span>g 包名</code></pre>
+<h2 id="babel"><a href="#babel" class="headerlink" title="babel"></a>babel</h2><h3 id="一、简介-2"><a href="#一、简介-2" class="headerlink" title="一、简介"></a>一、简介</h3><p>Babel是一个广泛使用的转码器，可以将ES6代码转为ES5代码，从而在现有环境执行执行。<br>这意味着，你可以现在就用 ES6 编写程序，而不用担心现有环境是否支持。</p>
+<h3 id="二、安装-1"><a href="#二、安装-1" class="headerlink" title="二、安装"></a>二、安装</h3><p>安装命令行转码工具<br>Babel提供babel-cli工具，用于命令行转码。它的安装命令如下：</p>
+<pre class=" language-javascript"><code class="language-javascript">npm install <span class="token operator">--</span>global babel<span class="token operator">-</span>cli</code></pre>
+<p>三、Babel的使用<br>1、初始化项目</p>
+<pre class=" language-javascript"><code class="language-javascript">npm init <span class="token operator">-</span>y</code></pre>
+<p>2、创建文件<br>src/example.js<br>下面是一段ES6代码：</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// 转码前</span>
+<span class="token comment" spellcheck="true">// 定义数据</span>
+<span class="token keyword">let</span> input <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
+<span class="token comment" spellcheck="true">// 将数组的每个元素 +1</span>
+input <span class="token operator">=</span> input<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>item <span class="token operator">=</span><span class="token operator">></span> item <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>input<span class="token punctuation">)</span></code></pre>
+<p>2、配置.babelrc<br>Babel的配置文件是.babelrc，存放在项目的根目录下，该文件用来设置转码规则和插件，基本格式如下。<br>presets字段设定转码规则，将es2015规则加入 .babelrc：</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token punctuation">{</span>
+    <span class="token string">"presets"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">"es2015"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token string">"plugins"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span></code></pre>
+<p>3、安装转码器<br>在项目中安装<code>npm install --save-dev babel-preset-es2015</code><br>4、转码</p>
+<pre class=" language-javascript"><code class="language-javascript"># 转码结果写入一个文件
+mkdir dist1
+# <span class="token operator">--</span>out<span class="token operator">-</span>file 或 <span class="token operator">-</span>o 参数指定输出文件
+babel src<span class="token operator">/</span>example<span class="token punctuation">.</span>js <span class="token operator">--</span>out<span class="token operator">-</span>file dist1<span class="token operator">/</span>compiled<span class="token punctuation">.</span>js
+# 或者
+babel src<span class="token operator">/</span>example<span class="token punctuation">.</span>js <span class="token operator">-</span>o dist1<span class="token operator">/</span>compiled<span class="token punctuation">.</span>js
+
+# 整个目录转码
+mkdir dist2
+# <span class="token operator">--</span>out<span class="token operator">-</span>dir 或 <span class="token operator">-</span>d 参数指定输出目录
+babel src <span class="token operator">--</span>out<span class="token operator">-</span>dir dist2
+# 或者
+babel src <span class="token operator">-</span>d dist2</code></pre>
+<h2 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h2><p>一、什么是模块化开发<br>传统非模块化开发有如下的缺点：<br>命名冲突<br>文件依赖</p>
+<p>模块化规范：<br>CommonJS模块化规范<br>ES6模块化规范<br>二、CommonJS模块规范<br>每个文件就是一个模块，有自己的作用域。在一个文件里面定义的变量、函数、类，都是私有的，对其他文件不可见。</p>
+<p>………………这部分内容上网查吧，累了。</p>
+<h2 id="Webpack"><a href="#Webpack" class="headerlink" title="Webpack"></a>Webpack</h2><h3 id="一、什么是Webpack"><a href="#一、什么是Webpack" class="headerlink" title="一、什么是Webpack"></a>一、什么是Webpack</h3><p>Webpack 是一个前端资源加载/打包工具。它将根据模块的依赖关系进行静态分析，然后将这些模块按照指定的规则生成对应的静态资源。</p>
+<p>从图中我们可以看出，Webpack 可以将多种静态资源 js、css、less 转换成一个静态文件，减少了页面的请求。 </p>
+<h3 id="二、Webpack安装"><a href="#二、Webpack安装" class="headerlink" title="二、Webpack安装"></a>二、Webpack安装</h3><p>1、全局安装</p>
+<pre class=" language-javascript"><code class="language-javascript">npm install <span class="token operator">-</span>g webpack webpack<span class="token operator">-</span>cli</code></pre>
+<p>2、安装后查看版本号</p>
+<pre class=" language-javascript"><code class="language-javascript">webpack <span class="token operator">-</span>v</code></pre>
+<h3 id="三、初始化项目"><a href="#三、初始化项目" class="headerlink" title="三、初始化项目"></a>三、初始化项目</h3><p>1、创建webpack文件夹<br>进入webpack目录，执行命令</p>
+<pre class=" language-javascript"><code class="language-javascript">npm init <span class="token operator">-</span>y</code></pre>
+<p>2、创建src文件夹<br>3、src下创建common.js</p>
+<pre class=" language-javascript"><code class="language-javascript">exports<span class="token punctuation">.</span>info <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>str<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>4、src下创建utils.js</p>
+<pre class=" language-javascript"><code class="language-javascript">exports<span class="token punctuation">.</span>add <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>5、src下创建main.js</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">const</span> common <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./common'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> utils <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./utils'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+common<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">'Hello world!'</span> <span class="token operator">+</span> utils<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>四、JS打包<br>1、webpack目录下创建配置文件webpack.config.js<br>以下配置的意思是：读取当前项目目录下src文件夹中的main.js（入口文件）内容，分析资源依赖，把相关的js文件打包，打包后的文件放入当前目录的dist文件夹下，打包后的js文件名为bundle.js</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"path"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//Node.js内置模块</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    entry<span class="token punctuation">:</span> <span class="token string">'./src/main.js'</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">//配置入口文件</span>
+    output<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        path<span class="token punctuation">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'./dist'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">//输出路径，__dirname：当前文件所在路径</span>
+        filename<span class="token punctuation">:</span> <span class="token string">'bundle.js'</span> <span class="token comment" spellcheck="true">//输出文件</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>2、命令行执行编译命令</p>
+<pre class=" language-javascript"><code class="language-javascript">webpack #有黄色警告
+webpack <span class="token operator">--</span>mode<span class="token operator">=</span>development #没有警告
+#执行后查看bundle<span class="token punctuation">.</span>js 里面包含了上面两个js文件的内容并惊醒了代码压缩</code></pre>
+<p>3、webpack目录下创建index.html<br>引用bundle.js</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>body<span class="token operator">></span>
+    <span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"dist/bundle.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">></span></code></pre>
+<h3 id="五、CSS打包"><a href="#五、CSS打包" class="headerlink" title="五、CSS打包"></a>五、CSS打包</h3><p>1、安装style-loader和 css-loader<br>Webpack 本身只能处理 JavaScript 模块，如果要处理其他类型的文件，就需要使用 loader 进行转换。</p>
+<p>Loader 可以理解为是模块和资源的转换器。</p>
+<p>首先我们需要安装相关Loader插件，css-loader 是将 css 装载到 javascript；style-loader 是让 javascript 认识css</p>
+<pre class=" language-javascript"><code class="language-javascript">npm install <span class="token operator">--</span>save<span class="token operator">-</span>dev style<span class="token operator">-</span>loader css<span class="token operator">-</span>loader </code></pre>
+<p>2、修改webpack.config.js</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"path"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//Node.js内置模块</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    entry<span class="token punctuation">:</span> <span class="token string">'./src/main.js'</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">//配置入口文件</span>
+    output<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        path<span class="token punctuation">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'./dist'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">//输出路径，__dirname：当前文件所在路径</span>
+        filename<span class="token punctuation">:</span> <span class="token string">'bundle.js'</span> <span class="token comment" spellcheck="true">//输出文件</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    module<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        rules<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+            test<span class="token punctuation">:</span> <span class="token regex">/\.css$/</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">//打包规则应用到以css结尾的文件上</span>
+            use<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'style-loader'</span><span class="token punctuation">,</span> <span class="token string">'css-loader'</span><span class="token punctuation">]</span>
+        <span class="token punctuation">}</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>3、在src文件夹创建style.css</p>
+<pre class=" language-javascript"><code class="language-javascript">body<span class="token punctuation">{</span>
+    background<span class="token punctuation">:</span>pink<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>4、修改main.js<br>在第一行引入style.css</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./style.css'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>5、浏览器中查看index.html</p>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://rika0-0.github.io" rel="external nofollow noreferrer">寒光君</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://rika0-0.github.io/2020/04/14/vue-node%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/">http://rika0-0.github.io/2020/04/14/vue-node%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="http://rika0-0.github.io" target="_blank">寒光君</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/vue/">
+                                    <span class="chip bg-color">vue</span>
+                                </a>
+                            
+                                <a href="/tags/node/">
+                                    <span class="chip bg-color">node</span>
+                                </a>
+                            
+                                <a href="/tags/es6/">
+                                    <span class="chip bg-color">es6</span>
+                                </a>
+                            
+                                <a href="/tags/webpack/">
+                                    <span class="chip bg-color">webpack</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                    <span class="chip bg-color">前端</span>
+                                </a>
+                            
+                                <a href="/tags/npm/">
+                                    <span class="chip bg-color">npm</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    
+    <div class="social-share" data-sites="qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">这个功能只是开着玩的，别当真</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+	
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2020/04/14/vue-node%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="vue+node快速入门">
+                        
+                        <span class="card-title">vue+node快速入门</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            前端知识快速整理ES6一、ECMAScript 6 简介ECMAScript 6.0（以下简称 ES6）是 JavaScript 语言的下一代标准，已经在 2015 年 6 月正式发布了。它的目标，是使得 JavaScript 语言可以用来
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-14
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            寒光君
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/vue/">
+                        <span class="chip bg-color">vue</span>
+                    </a>
+                    
+                    <a href="/tags/node/">
+                        <span class="chip bg-color">node</span>
+                    </a>
+                    
+                    <a href="/tags/es6/">
+                        <span class="chip bg-color">es6</span>
+                    </a>
+                    
+                    <a href="/tags/webpack/">
+                        <span class="chip bg-color">webpack</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                        <span class="chip bg-color">前端</span>
+                    </a>
+                    
+                    <a href="/tags/npm/">
+                        <span class="chip bg-color">npm</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/04/10/%E6%AF%8F%E6%97%A5%E6%84%9F%E8%A8%80/">
+                    <div class="card-image">
+                        
+                        <img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1586857949819&amp;di=12a883c007f1287fd9b2a585d0c11479&amp;imgtype=0&amp;src=http%3A%2F%2Fi1.hdslb.com%2Fbfs%2Farchive%2Fe6aaff7040c7d213c14cec401aaab61eafd43bc5.jpg" class="responsive-img" alt="日记">
+                        
+                        <span class="card-title">日记</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            心情日记2020-04-14 多云有一些人吧，为什么泪点就那么低呢？因为一曲令人共鸣的音乐，因为一幕跨越了数十年的似曾相识，或是因为一句话，一句本不该在此刻听到的话。
+ 路过母校的门口，于是才发觉自己再也不能在走廊的拐角那儿等喜欢的人。清晨
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-10
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            寒光君
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%BF%83%E6%83%85%E6%97%A5%E8%AE%B0/">
+                        <span class="chip bg-color">心情日记</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="753687883"
+                   fixed='true'
+                   autoplay='true'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2019</span>
+            <a href="http://rika0-0.github.io" target="_blank">寒光君</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">33.4k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/RiKa0-0" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:2206491416@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1790464356" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1790464356" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true,"react":{"opacity":0.7}}});</script></body>
+
+</html>
